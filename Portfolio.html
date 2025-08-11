@@ -1,0 +1,3182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURAN SINGH DHAMI - Computer Science Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* ===== GLOBAL STYLES ===== */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+        }
+        
+        /* ===== NAVIGATION SECTION STYLES ===== */
+        .navbar-blur { 
+            backdrop-filter: blur(20px); 
+            background: rgba(30, 58, 138, 0.9); 
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .profile-image {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        /* Profile popup styling */
+        .profile-popup { 
+            display: none; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: rgba(0,0,0,0.6); 
+            z-index: 1000; 
+            backdrop-filter: blur(5px);
+        }
+        
+        .profile-content { 
+            background: white; 
+            border-radius: 24px; 
+            max-width: 500px; 
+            margin: 50px auto; 
+            padding: 40px; 
+            position: relative; 
+            max-height: 80vh; 
+            overflow-y: auto; 
+            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+        }
+        
+        .profile-popup-image {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3b82f6;
+        }
+        
+        /* ===== HOME SECTION STYLES ===== */
+        .home-bg { 
+            background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 50%, #9ca3af 100%); 
+        }
+        
+        .homepage-image {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            border: 4px solid white;
+        }
+        
+        /* ===== ABOUT SECTION STYLES ===== */
+        .about-bg {
+            background-color: white;
+        }
+        
+        /* ===== PROJECTS SECTION STYLES ===== */
+        .projects-bg {
+            background-color: #f9fafb;
+        }
+        
+        .card-hover { 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+        .card-hover:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15); 
+        }
+        
+        /* ===== CERTIFICATIONS SECTION STYLES ===== */
+        .certifications-bg {
+            background-color: white;
+        }
+        
+        .certification-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin: 0 auto 16px auto;
+        }
+        
+        /* ===== SKILLS SECTION STYLES ===== */
+        .skills-bg {
+            background-color: #f9fafb;
+        }
+        
+        .skill-bar { 
+            transition: width 1.5s ease-in-out; 
+        }
+        
+        /* ===== HOBBIES SECTION STYLES ===== */
+        .hobbies-bg {
+            background-color: white;
+        }
+        
+        /* ===== CONTACT SECTION STYLES ===== */
+        .contact-bg {
+            background-color: #f9fafb;
+        }
+        
+        /* ===== FOOTER SECTION STYLES ===== */
+        .footer-bg {
+            background-color: #1f2937;
+        }
+        
+        /* ===== SHARED STYLES ===== */
+        .section-padding {
+            padding-top: 100px;
+            margin-top: -80px;
+        }
+        
+        .modern-btn {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+        .modern-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+        
+        .fade-in { 
+            opacity: 0; 
+            transform: translateY(40px); 
+            transition: all 0.8s ease; 
+        }
+        .fade-in.visible { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- ===== NAVIGATION SECTION ===== -->
+    <!-- Fixed Navigation Bar with profile image and menu links -->
+    <nav class="fixed top-0 w-full navbar-blur z-40">
+        <div class="w-full px-8 lg:px-12">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo/Profile Section -->
+                <div class="flex items-center">
+                    <!-- Clickable profile image - Replace src with your image path -->
+                    <img src="WhatsApp Image 2025-08-09 at 17.56.37.jpeg" alt="Profile" class="profile-image cursor-pointer hover:scale-110 transition-transform shadow-lg" id="profile-trigger">
+                </div>
+                
+                <!-- Desktop Navigation Menu -->
+                <!-- Desktop Navigation Menu -->
+<!-- Desktop Navigation Menu -->
+<div class="hidden md:flex space-x-10">
+    <a href="#home" class="text-white/90 hover:text-white transition-colors font-bold text-lg">HOME</a>
+    <a href="#about" class="text-white/90 hover:text-white transition-colors font-bold text-lg">ABOUT</a>
+    <a href="#projects" class="text-white/90 hover:text-white transition-colors font-bold text-lg">PROJECTS</a>
+    <a href="#certifications" class="text-white/90 hover:text-white transition-colors font-bold text-lg">CERTIFICATIONS</a>
+    <a href="#skills" class="text-white/90 hover:text-white transition-colors font-bold text-lg">SKILLS</a>
+    <a href="#hobbies" class="text-white/90 hover:text-white transition-colors font-bold text-lg">HOBBIES</a>
+    <a href="#contact" class="text-white/90 hover:text-white transition-colors font-bold text-lg">CONTACT</a>
+</div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-900/95 backdrop-blur-md border-t border-white/10">
+    <div class="px-4 py-3 space-y-3">
+        <a href="#home" class="block py-2 text-white/90 hover:text-white transition-colors font-bold text-lg">HOME</a>
+        <a href="#about" class="block py-2 text-white/90 hover:text-white transition-colors font-bold text-lg">ABOUT</a>
+        <a href="#projects" class="block py-2 text-white/90 hover:text-white transition-colors font-bold text-lg">PROJECTS</a>
+        <a href="#certifications" class="block py-2 text-white/90 hover:text-white transition-colors font-bold text-lg">CERTIFICATIONS</a>
+        <a href="#skills" class="block py-2 text-white/90 hover:text-white transition-colors font-bold text-lg">SKILLS</a>
+        <a href="#hobbies" class="block py-2 text-white/90 hover:text-white transition-colors font-bold text-lg">HOBBIES</a>
+        <a href="#contact" class="block py-2 text-white/90 hover:text-white transition-colors font-bold text-lg">CONTACT</a>
+    </div>
+</div>
+
+        </div>
+    </nav>
+
+    <!-- Profile Information Popup -->
+     <div class="profile-popup" id="profile-popup">
+        <div class="profile-content shadow-xl">
+            
+            <!-- Close button -->
+            <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-3xl font-light" id="close-profile">&times;</button>
+            
+            <!-- Profile header -->
+            <div class="text-center mb-8">
+                <!-- Profile popup image -->
+                <img src="WhatsApp Image 2025-08-09 at 17.56.38.jpeg" alt="Profile" class="profile-popup-image mx-auto mb-4 shadow-xl">
+                <h3 class="text-2xl font-bold text-gray-800">SURAN SINGH DHAMI</h3>
+                <p class="text-blue-600 font-semibold">Computer Science Engineer</p>
+            </div>
+
+   
+            <!-- Detailed information -->
+            <div class="space-y-4 text-sm">
+                <!-- Email -->
+                <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <span class="text-2xl">📧</span>
+                    <div>
+                        <p class="font-semibold text-gray-800">Email</p>
+                        <p class="text-gray-600">surandhami13@gmail.com</p>
+                    </div>
+                </div>
+                
+                <!-- Phone -->
+                <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <span class="text-2xl">📱</span>
+                    <div>
+                        <p class="font-semibold text-gray-800">Phone</p>
+                        <p class="text-gray-600">+91 7695948951</p>
+                    </div>
+                </div>
+                
+                <!-- Location -->
+                <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <span class="text-2xl">📍</span>
+                    <div>
+                        <p class="font-semibold text-gray-800">Location</p>
+                        <p class="text-gray-600">India</p>
+                    </div>
+                </div>
+                
+                <!-- Age -->
+                <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <span class="text-2xl">🎂</span>
+                    <div>
+                        <p class="font-semibold text-gray-800">Age</p>
+                        <p class="text-gray-600">25 years old</p>
+                    </div>
+                </div>
+                
+                <!-- Experience -->
+                <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <span class="text-2xl">💼</span>
+                    <div>
+                        <p class="font-semibold text-gray-800">Experience</p>
+                        <p class="text-gray-600">3+ years</p>
+                    </div>
+                </div>
+                
+                <!-- Education -->
+                <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <span class="text-2xl">🎓</span>
+                    <div>
+                        <p class="font-semibold text-gray-800">Education</p>
+                        <p class="text-gray-600">B.Tech Computer Science</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Settings Button -->
+            <div class="mt-6 pt-6 border-t border-gray-200">
+                <button onclick="openSettingsLogin()" class="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white py-3 px-4 rounded-lg font-semibold transition-all hover:from-purple-600 hover:to-pink-700 hover:transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span>Settings</span>
+                </button>
+                <p class="text-center text-gray-500 text-xs mt-2">Secure access to website management</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HOME SECTION ===== -->
+    <!-- Hero section with gray gradient background and main profile image -->
+    <section id="home" class="home-bg min-h-screen flex items-center justify-center">
+    <div class="w-full px-8 lg:px-12 py-20">
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+            <!-- Information Side - Extended to take more space -->
+            <div class="text-center lg:text-left text-gray-800 lg:order-1 lg:pr-8">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 fade-in">SURAN SINGH DHAMI</h1>
+                <p class="text-xl sm:text-2xl mb-4 text-gray-600 fade-in">Computer Science Engineer</p>
+                
+                <!-- Extended description with justified text -->
+                <div class="text-lg mb-8 text-gray-800 fade-in text-justify leading-relaxed">
+                    <p class="mb-4">
+                        Passionate about software development, problem-solving, and creating innovative solutions. Specialized in modern web technologies, scalable system design, and emerging financial technologies such as the stock market, cryptocurrency, and blockchain applications.
+                        Enthusiastic about AI-driven automation, data analytics, and cybersecurity. Always eager to explore new trends, learn cutting-edge tools, and build impactful solutions that blend technology with real-world needs.
+                        With a strong foundation in computer science principles and hands-on experience in full-stack development, I thrive on tackling complex challenges and delivering robust, user-centric applications. My expertise spans across multiple programming languages, frameworks, and emerging technologies.
+                    </p>
+                </div>
+                
+                <!-- Call-to-action buttons -->
+               <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start fade-in mb-8">
+    <a href="#projects" class="modern-btn text-white px-8 py-4 rounded-full font-semibold transition-all bg-blue-600 hover:bg-blue-700">View My Projects</a>
+    
+    <!-- Direct download link -->
+    <a href="MyResume(DHAMI) (1).pdf" download class="border-2 border-gray-800 text-gray-800 px-8 py-4 rounded-full font-semibold hover:bg-gray-800 hover:text-white transition-all">
+        Download My Resume
+    </a>
+</div>
+
+                
+                <!-- Social Media Links -->
+               <div class="mt-8">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Connect With Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/suran.singh.dhami.2025" target="_blank" class="w-12 h-12 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors shadow-lg flex items-center justify-center hover:scale-110 transform transition-transform">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://x.com/Dhammi_7" target="_blank" class="w-12 h-12 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors shadow-lg flex items-center justify-center hover:scale-110 transform transition-transform">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18.244 2.25h3.308l-7.228 8.26 8.494 11.24h-6.655l-5.19-6.79-5.93 6.79H1.735l7.74-8.86L1.25 2.25h6.823l4.712 6.217L18.244 2.25zm-1.157 17.52h1.834L7.037 4.488H5.07l12.017 15.282z"/>
+    </svg>
+</a>
+
+                            </a>
+                            <a href="https://www.linkedin.com/in/suransingh7/" target="_blank" class="w-12 h-12 bg-blue-800 text-white rounded-xl hover:bg-blue-900 transition-colors shadow-lg flex items-center justify-center hover:scale-110 transform transition-transform">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/Dhammi7" target="_blank" class="w-12 h-12 bg-gray-800 text-white rounded-xl hover:bg-gray-900 transition-colors shadow-lg flex items-center justify-center hover:scale-110 transform transition-transform">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/dhammi_7/?next=%2F" target="_blank" class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl hover:from-purple-600 hover:to-pink-600 transition-colors shadow-lg flex items-center justify-center hover:scale-110 transform transition-transform">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+            <!-- Profile Image Side - Free-form image without frame -->
+            <div class="text-center lg:text-right fade-in lg:order-2 relative">
+                <!-- Free-form homepage image without border/frame -->
+                <div class="relative inline-block">
+                    <!-- <img src="WhatsApp Image 2025-08-09 at 17.56.38.jpeg"  -->
+                
+           <img src="WhatsApp Image 2025-08-09 at 17.56.38.jpeg" class="w-130 lg:w-[500px] h-auto">
+              
+       
+     </div>
+  </div>
+    
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <!-- Full-screen About section with image upload functionality -->
+    <section id="about" class="section-padding min-h-screen flex items-center justify-center about-bg">
+        <div class="w-full px-8 lg:px-12 py-20">
+            <!-- Section header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 fade-in">ABOUT ME </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">A dedicated Computer Science Engineer with passion for technology and innovation.</p>
+            </div>
+            
+            <!-- About content grid -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Image upload section -->
+                <div class="fade-in">
+                    <div class="relative">
+                        <!-- About image display -->
+                        <div id="about-image-container" class="w-64 h-64 sm:w-80 sm:h-80 mx-auto bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-6xl sm:text-8xl text-white shadow-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform" onclick="document.getElementById('about-image-upload').click()">
+                            <span id="about-image-placeholder">💻</span>
+                            <img id="about-image-preview" class="w-full h-full object-cover hidden" alt="About Me">
+                        </div>
+                        
+                        <!-- Upload button overlay -->
+                        <div class="absolute bottom-4 right-4">
+                            <button onclick="document.getElementById('about-image-upload').click()" class="bg-white text-blue-600 p-3 rounded-full shadow-lg hover:bg-blue-50 transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        
+                        <!-- Hidden file input -->
+                        <input type="file" id="about-image-upload" accept="image/*" class="hidden" onchange="handleAboutImageUpload(this)">
+                    </div>
+                    
+                    <!-- Upload instructions -->
+                    <p class="text-center text-gray-500 text-sm mt-4 fade-in">Click the image or + button to upload your photo</p>
+                </div>
+                
+                <!-- About text content -->
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">My Journey</h3>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">As a Computer Science Engineer, I've developed a strong foundation in software development, algorithms, and system design. My journey began with curiosity about how technology works and evolved into a passion for creating solutions that make a difference.</p>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">I specialize in full-stack development, with expertise in modern frameworks and technologies. I enjoy tackling complex problems and turning innovative ideas into reality through clean, efficient code.</p>
+                    
+                    <!-- Professional qualities -->
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Problem Solver</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium">Team Collaborator</span>
+                        <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">Continuous Learner</span>
+                        <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Innovation Focused</span>
+                    </div>
+                    
+                    <!-- Additional stats -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+                            <div class="text-2xl font-bold text-blue-600 mb-1">3+</div>
+                            <div class="text-gray-600 text-sm">Years Experience</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+                            <div class="text-2xl font-bold text-green-600 mb-1">50+</div>
+                            <div class="text-gray-600 text-sm">Projects Completed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <!-- Projects showcase with 6 featured projects in card layout -->
+    <section id="projects" class="section-padding py-20 projects-bg">
+    <div class="w-full px-8 lg:px-12">
+        <!-- Section header -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 fade-in">PROJECTS</h2>
+            <p class="text-xl text-gray-600 fade-in">Showcasing my technical skills through impactful real-world solutions</p>
+        </div>
+        
+        <!-- Projects grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Project 1: Waste Management System -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="h-48 bg-gradient-to-br from-green-600 to-lime-500 flex items-center justify-center text-6xl text-white">
+                    ♻️
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Waste Management System</h3>
+                    <p class="text-gray-600 mb-4">A digital platform to track, manage, and optimize waste collection and recycling using smart bins and real-time data.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">React</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Node.js</span>
+                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">MongoDB</span>
+                    </div>
+                    <div class="flex space-x-3 mb-4">
+                        <button class="text-blue-600 hover:text-blue-800 font-medium transition-colors">Live Demo</button>
+                        <button class="text-gray-600 hover:text-gray-800 font-medium transition-colors">GitHub</button>
+                    </div>
+                    <button onclick="showProjectDetails(0)" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        View More Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 2: Job Finder -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center text-6xl text-white">
+                    💼
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Job Finder</h3>
+                    <p class="text-gray-600 mb-4">An online job portal that connects job seekers with employers, featuring advanced search, filtering, and application tracking.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">Laravel</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">MySQL</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Bootstrap</span>
+                    </div>
+                    <div class="flex space-x-3 mb-4">
+                        <button class="text-blue-600 hover:text-blue-800 font-medium transition-colors">Live Demo</button>
+                        <button class="text-gray-600 hover:text-gray-800 font-medium transition-colors">GitHub</button>
+                    </div>
+                    <button onclick="showProjectDetails(1)" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        View More Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 3: Doctor Appointment System -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="h-48 bg-gradient-to-br from-pink-500 to-red-500 flex items-center justify-center text-6xl text-white">
+                    🏥
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Doctor Appointment System</h3>
+                    <p class="text-gray-600 mb-4">Web-based system to book, manage, and track medical appointments with reminders and patient history records.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">PHP</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">MySQL</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">jQuery</span>
+                    </div>
+                    <div class="flex space-x-3 mb-4">
+                        <button class="text-blue-600 hover:text-blue-800 font-medium transition-colors">Live Demo</button>
+                        <button class="text-gray-600 hover:text-gray-800 font-medium transition-colors">GitHub</button>
+                    </div>
+                    <button onclick="showProjectDetails(2)" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        View More Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 4: Ride Sharing System -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-6xl text-white">
+                    🚗
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Ride Sharing System</h3>
+                    <p class="text-gray-600 mb-4">A mobile-friendly system that enables users to book rides, share trips, and track drivers in real time.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Flutter</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">Firebase</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Google Maps API</span>
+                    </div>
+                    <div class="flex space-x-3 mb-4">
+                        <button class="text-blue-600 hover:text-blue-800 font-medium transition-colors">Live Demo</button>
+                        <button class="text-gray-600 hover:text-gray-800 font-medium transition-colors">GitHub</button>
+                    </div>
+                    <button onclick="showProjectDetails(3)" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        View More Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 5: FarmaCap -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="h-48 bg-gradient-to-br from-teal-500 to-green-500 flex items-center justify-center text-6xl text-white">
+                    🌾
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">FarmaCap</h3>
+                    <p class="text-gray-600 mb-4">A farmer’s assistant app providing weather forecasts, soil analysis, and crop season recommendations for better yield.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Python</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Django</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">API Integration</span>
+                    </div>
+                    <div class="flex space-x-3 mb-4">
+                        <button class="text-blue-600 hover:text-blue-800 font-medium transition-colors">Live Demo</button>
+                        <button class="text-gray-600 hover:text-gray-800 font-medium transition-colors">GitHub</button>
+                    </div>
+                    <button onclick="showProjectDetails(4)" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        View More Details
+                    </button>
+                </div>
+            </div>
+            <!-- Project 6: AI Chatbot -->
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+    <div class="h-48 bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center text-6xl text-white">
+        🤖
+    </div>
+    <div class="p-6">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">AI Chatbot</h3>
+        <p class="text-gray-600 mb-4">An AI-powered chatbot that understands user queries, provides instant responses, and integrates with multiple platforms for automated customer support.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Python</span>
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Flask</span>
+            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">OpenAI API</span>
+        </div>
+        <div class="flex space-x-3 mb-4">
+            <button class="text-blue-600 hover:text-blue-800 font-medium transition-colors">Live Demo</button>
+            <button class="text-gray-600 hover:text-gray-800 font-medium transition-colors">GitHub</button>
+        </div>
+        <button onclick="showProjectDetails(4)" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+            View More Details
+        </button>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- ===== CERTIFICATIONS SECTION ===== -->
+    <!-- Professional certifications with 8 certificates in grid layout -->
+    
+        <!-- Certificates grid -->
+        <section id="certifications" class="py-20 bg-gray-50">
+    <div class="w-full px-8 lg:px-12">
+        <!-- Section header -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">MY CERTIFICATIONS </h2>
+            <p class="text-xl text-gray-600">A showcase of my earned certificates</p>
+        </div>
+
+        <!-- Certificates grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+            <!-- Certificate Card Example -->
+            <div class="bg-white rounded-xl shadow-lg border overflow-hidden">
+                <img src="fullstack.png" alt="C Certificate" class="w-full h-auto">
+                <div class="p-4 flex justify-between gap-2">
+                    <button class="view-more-btn flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-sm">
+                        View More
+                    </button>
+                    <a href="path/to/c-certificate.pdf" download class="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                        Download
+                    </a>
+                </div>
+                <div class="p-4 details hidden border-t">
+                    <h3 class="text-lg font-semibold text-gray-800">C Programming Certificate</h3>
+                    <p class="text-sm text-gray-600">Issued by: Example Academy</p>
+                    <p class="text-sm text-gray-500">Year: 2024</p>
+                </div>
+            </div>
+
+            <!-- Repeat for 5 more certificates -->
+            <div class="bg-white rounded-xl shadow-lg border overflow-hidden">
+                <img src="iit.png" alt="C++ Certificate" class="w-full h-auto">
+                <div class="p-4 flex justify-between gap-2">
+                    <button class="view-more-btn flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-sm">
+                        View More
+                    </button>
+                    <a href="path/to/cpp-certificate.pdf" download class="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                        Download
+                    </a>
+                </div>
+                <div class="p-4 details hidden border-t">
+                    <h3 class="text-lg font-semibold text-gray-800">C++ Programming Certificate</h3>
+                    <p class="text-sm text-gray-600">Issued by: Example Academy</p>
+                    <p class="text-sm text-gray-500">Year: 2024</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg border overflow-hidden">
+                <img src="kpr.png" alt="Java Certificate" class="w-full h-auto">
+                <div class="p-4 flex justify-between gap-2">
+                    <button class="view-more-btn flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-sm">
+                        View More
+                    </button>
+                    <a href="path/to/java-certificate.pdf" download class="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                        Download
+                    </a>
+                </div>
+                <div class="p-4 details hidden border-t">
+                    <h3 class="text-lg font-semibold text-gray-800">Java Programming Certificate</h3>
+                    <p class="text-sm text-gray-600">Issued by: Example Academy</p>
+                    <p class="text-sm text-gray-500">Year: 2024</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg border overflow-hidden">
+                <img src="ebox.png" alt="Python Certificate" class="w-full h-auto">
+                <div class="p-4 flex justify-between gap-2">
+                    <button class="view-more-btn flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-sm">
+                        View More
+                    </button>
+                    <a href="path/to/python-certificate.pdf" download class="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                        Download
+                    </a>
+                </div>
+                <div class="p-4 details hidden border-t">
+                    <h3 class="text-lg font-semibold text-gray-800">Python Programming Certificate</h3>
+                    <p class="text-sm text-gray-600">Issued by: Example Academy</p>
+                    <p class="text-sm text-gray-500">Year: 2024</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg border overflow-hidden">
+                <img src="c++.png" alt="Cloud Certificate" class="w-full h-auto">
+                <div class="p-4 flex justify-between gap-2">
+                    <button class="view-more-btn flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-sm">
+                        View More
+                    </button>
+                    <a href="path/to/cloud-certificate.pdf" download class="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                        Download
+                    </a>
+                </div>
+                <div class="p-4 details hidden border-t">
+                    <h3 class="text-lg font-semibold text-gray-800">Cloud Computing Certificate</h3>
+                    <p class="text-sm text-gray-600">Issued by: Example Academy</p>
+                    <p class="text-sm text-gray-500">Year: 2024</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg border overflow-hidden">
+                <img src=" data structure.png " alt="JavaScript Certificate" class="w-full h-auto">
+                <div class="p-4 flex justify-between gap-2">
+                    <button class="view-more-btn flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-sm">
+                        View More
+                    </button>
+                    <a href="path/to/javascript-certificate.pdf" download class="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                        Download
+                    </a>
+                </div>
+                <div class="p-4 details hidden border-t">
+                    <h3 class="text-lg font-semibold text-gray-800">JavaScript Programming Certificate</h3>
+                    <p class="text-sm text-gray-600">Issued by: Example Academy</p>
+                    <p class="text-sm text-gray-500">Year: 2024</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg border overflow-hidden">
+                <img src=" dbms.png " alt="JavaScript Certificate" class="w-full h-auto">
+                <div class="p-4 flex justify-between gap-2">
+                    <button class="view-more-btn flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-sm">
+                        View More
+                    </button>
+                    <a href="path/to/javascript-certificate.pdf" download class="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                        Download
+                    </a>
+                </div>
+                <div 
+                
+                class="p-4 details hidden border-t">
+                    <h3 class="text-lg font-semibold text-gray-800">JavaScript Programming Certificate</h3>
+                    <p class="text-sm text-gray-600">Issued by: Example Academy</p>
+                    <p class="text-sm text-gray-500">Year: 2024</p>
+                </div>
+            </div><div class="bg-white rounded-xl shadow-lg border overflow-hidden">
+                <img src="aws.png" alt="JavaScript Certificate" class="w-full h-auto">
+                <div class="p-4 flex justify-between gap-2">
+                    <button class="view-more-btn flex-1 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors text-sm">
+                        View More
+                    </button>
+                    <a href="path/to/javascript-certificate.pdf" download class="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                        Download
+                    </a>
+                </div>
+                <div class="p-4 details hidden border-t">
+                    <h3 class="text-lg font-semibold text-gray-800">JavaScript Programming Certificate</h3>
+                    <p class="text-sm text-gray-600">Issued by: Example Academy</p>
+                    <p class="text-sm text-gray-500">Year: 2024</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll('.view-more-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const details = btn.parentElement.nextElementSibling;
+            details.classList.toggle('hidden');
+            btn.textContent = details.classList.contains('hidden') ? 'View More' : 'View Less';
+        });
+    });
+</script>
+
+</section>
+
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <!-- Technical skills with animated progress bars for frontend and backend -->
+    <section id="skills" class="py-20 bg-gray-50">
+    <div class="w-full px-8 lg:px-12">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">SKILLS</h2>
+            <p class="text-xl text-gray-600">Core competencies with proficiency levels (1–5)</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Fullstack -->
+            <div class="bg-white rounded-xl shadow-lg p-6 relative">
+                <h3 class="text-xl font-semibold mb-4">Fullstack Development</h3>
+                <div id="chart-fullstack" class="mb-4"></div>
+                <div id="details-fullstack" class="hidden text-gray-700 mb-4">
+                    Skilled in building and deploying scalable fullstack web applications using HTML, CSS, JavaScript, Node.js, and databases.
+                </div>
+                <button onclick="toggleDetails('details-fullstack')" 
+                    class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">View More</button>
+            </div>
+
+            <!-- Cybersecurity -->
+            <div class="bg-white rounded-xl shadow-lg p-6 relative">
+                <h3 class="text-xl font-semibold mb-4">Cybersecurity</h3>
+                <div id="chart-cyber" class="mb-4"></div>
+                <div id="details-cyber" class="hidden text-gray-700 mb-4">
+                    Experienced in securing networks, systems, and applications with penetration testing and risk assessment practices.
+                </div>
+                <button onclick="toggleDetails('details-cyber')" 
+                    class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">View More</button>
+            </div>
+
+            <!-- Mobile App Development -->
+            <div class="bg-white rounded-xl shadow-lg p-6 relative">
+                <h3 class="text-xl font-semibold mb-4">Mobile App Development</h3>
+                <div id="chart-mobile" class="mb-4"></div>
+                <div id="details-mobile" class="hidden text-gray-700 mb-4">
+                    Capable of building Android and iOS apps using Flutter, React Native, and native development tools.
+                </div>
+                <button onclick="toggleDetails('details-mobile')" 
+                    class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">View More</button>
+            </div>
+
+            <!-- Database Management -->
+            <div class="bg-white rounded-xl shadow-lg p-6 relative">
+                <h3 class="text-xl font-semibold mb-4">Database Management</h3>
+                <div id="chart-database" class="mb-4"></div>
+                <div id="details-database" class="hidden text-gray-700 mb-4">
+                    Expertise in SQL, NoSQL, database optimization, and backup strategies for secure and efficient storage.
+                </div>
+                <button onclick="toggleDetails('details-database')" 
+                    class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">View More</button>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="bg-white rounded-xl shadow-lg p-6 relative">
+                <h3 class="text-xl font-semibold mb-4">Soft Skills</h3>
+                <div id="chart-soft" class="mb-4"></div>
+                <div id="details-soft" class="hidden text-gray-700 mb-4">
+                    Strong communication, leadership, teamwork, and problem-solving abilities to thrive in diverse environments.
+                </div>
+                <button onclick="toggleDetails('details-soft')" 
+                    class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">View More</button>
+            </div>
+
+            <!-- Cloud Computing -->
+            <div class="bg-white rounded-xl shadow-lg p-6 relative">
+                <h3 class="text-xl font-semibold mb-4">Cloud Computing</h3>
+                <div id="chart-cloud" class="mb-4"></div>
+                <div id="details-cloud" class="hidden text-gray-700 mb-4">
+                    Knowledge in AWS, Azure, and Google Cloud, focusing on deployment, scaling, and cost optimization.
+                </div>
+                <button onclick="toggleDetails('details-cloud')" 
+                    class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">View More</button>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script>
+    function renderChart(id, data, color) {
+        var options = {
+            chart: { type: 'line', height: 200 },
+            series: [{ data: data }],
+            stroke: { curve: 'smooth', width: 2 },
+            colors: [color],
+            markers: { size: 4 },
+            xaxis: { 
+                categories: data.map((_, i) => `Level ${i + 1}`)
+            },
+            yaxis: {
+                min: 1,
+                max: 5,
+                tickAmount: 5,
+                labels: { show: false }, // removed 1 2 3 4 5
+                title: { text: 'Level' }
+            }
+        };
+        new ApexCharts(document.querySelector(id), options).render();
+    }
+
+    function toggleDetails(id) {
+        document.getElementById(id).classList.toggle("hidden");
+    }
+
+    renderChart("#chart-fullstack", [1, 2, 3, 4, 5], "#1E88E5");
+    renderChart("#chart-cyber", [1, 2, 3, 4, 5], "#E53935");
+    renderChart("#chart-mobile", [1, 2, 3, 4, 5], "#8E24AA");
+    renderChart("#chart-database", [1, 2, 3, 4, 5], "#43A047");
+    renderChart("#chart-soft", [1, 2, 3, 4, 5], "#FB8C00");
+    renderChart("#chart-cloud", [1, 2, 3, 4, 5], "#00ACC1");
+</script>
+
+
+    </section>
+
+    <!-- ===== HOBBIES SECTION ===== -->
+<section id="hobbies" class="section-padding py-20 hobbies-bg">
+    <div class="w-full px-8 lg:px-12">
+        
+        <!-- Section header -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 fade-in">HOBBIES AND INTERESTS</h2>
+            <p class="text-xl text-gray-600 fade-in">What keeps me inspired and motivated outside of work</p>
+        </div>
+
+        <!-- Hobbies grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Hobby Card -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="h-40 flex items-center justify-center bg-gray-50">
+                    <img src="https://cdn-icons-png.flaticon.com/512/841/841364.png" alt="Competitive Programming" class="w-20 h-20 object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Competitive Programming</h3>
+                    <p class="text-gray-600">Solving algorithmic challenges and participating in coding competitions.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="h-40 flex items-center justify-center bg-gray-50">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2972/2972048.png" alt="Technical Reading" class="w-20 h-20 object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Technical Reading</h3>
+                    <p class="text-gray-600">Staying updated with latest technology trends and research papers.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="h-40 flex items-center justify-center bg-gray-50">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3940/3940056.png" alt="Gaming" class="w-20 h-20 object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Gaming</h3>
+                    <p class="text-gray-600">Strategy games and exploring virtual worlds for creative inspiration.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="h-40 flex items-center justify-center bg-gray-50">
+                    <img src="https://cdn-icons-png.flaticon.com/512/727/727240.png" alt="Music" class="w-20 h-20 object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Music</h3>
+                    <p class="text-gray-600">Listening to various genres and occasionally creating digital music.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="h-40 flex items-center justify-center bg-gray-50">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2332/2332722.png" alt="Fitness" class="w-20 h-20 object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Fitness</h3>
+                    <p class="text-gray-600">Maintaining physical health through regular exercise and outdoor activities.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="h-40 flex items-center justify-center bg-gray-50">
+                    <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png" alt="Travel" class="w-20 h-20 object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Travel</h3>
+                    <p class="text-gray-600">Exploring new places and experiencing different cultures and technologies.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="h-40 flex items-center justify-center bg-gray-50">
+                    <img src="https://cdn-icons-png.flaticon.com/512/906/906334.png" alt="Open Source" class="w-20 h-20 object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Open Source</h3>
+                    <p class="text-gray-600">Contributing to open source projects and building community tools.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="h-40 flex items-center justify-center bg-gray-50">
+                    <img src="https://cdn-icons-png.flaticon.com/512/825/825484.png" alt="Cryptocurrency" class="w-20 h-20 object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Cryptocurrency</h3>
+                    <p class="text-gray-600">Investing, trading, and staying informed about blockchain innovations.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="h-40 flex items-center justify-center bg-gray-50">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="Stock Market" class="w-20 h-20 object-contain">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Stock Market</h3>
+                    <p class="text-gray-600">Analyzing trends and making informed investment decisions.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <!-- Contact form and information with social media links -->
+    <section id="contact" class="section-padding py-20 contact-bg">
+        <div class="w-full px-8 lg:px-12">
+            <!-- Section header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 fade-in">GET IN TOUCH</h2>
+                <p class="text-xl text-gray-600 fade-in">Let's connect and discuss opportunities or collaborations!</p>
+            </div>
+            
+            <!-- Contact content grid -->
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact information -->
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-8">Contact Information</h3>
+                    <div class="space-y-6">
+                        <!-- Email contact -->
+                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl">
+                                📧
+                            </div>
+                            <div>
+                                <p class="text-gray-600 font-medium">Email</p>
+                                <p class="text-gray-800 font-semibold">surandhami13@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Phone contact -->
+                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-2xl">
+                                📱
+                            </div>
+                            <div>
+                                <p class="text-gray-600 font-medium">Phone</p>
+                                <p class="text-gray-800 font-semibold">+91 7695948951</p>
+                            </div>
+                        </div>
+                        
+                        <!-- WhatsApp contact -->
+                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-sm cursor-pointer hover:bg-green-50 transition-colors" onclick="openWhatsApp()">
+                            <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-2xl">
+                                💬
+                            </div>
+                            <div>
+                                <p class="text-gray-600 font-medium">WhatsApp</p>
+                                <p class="text-gray-800 font-semibold">+91 7695948951</p>
+                                <p class="text-green-600 text-xs">Click to chat directly</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Location -->
+                        <div class="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-2xl">
+                                📍
+                            </div>
+                            <div>
+                                <p class="text-gray-600 font-medium">Location</p>
+                                <p class="text-gray-800 font-semibold">India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social media links -->
+                    <div class="mt-8">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Connect With Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/suran.singh.dhami.2025" target="_blank" class="w-12 h-12 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors shadow-lg flex items-center justify-center hover:scale-110 transform transition-transform">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://x.com/Dhammi_7" target="_blank" class="w-12 h-12 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors shadow-lg flex items-center justify-center hover:scale-110 transform transition-transform">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18.244 2.25h3.308l-7.228 8.26 8.494 11.24h-6.655l-5.19-6.79-5.93 6.79H1.735l7.74-8.86L1.25 2.25h6.823l4.712 6.217L18.244 2.25zm-1.157 17.52h1.834L7.037 4.488H5.07l12.017 15.282z"/>
+    </svg>
+</a>
+
+                            </a>
+                            <a href="https://www.linkedin.com/in/suransingh7/" target="_blank" class="w-12 h-12 bg-blue-800 text-white rounded-xl hover:bg-blue-900 transition-colors shadow-lg flex items-center justify-center hover:scale-110 transform transition-transform">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/Dhammi7" target="_blank" class="w-12 h-12 bg-gray-800 text-white rounded-xl hover:bg-gray-900 transition-colors shadow-lg flex items-center justify-center hover:scale-110 transform transition-transform">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/dhammi_7/?next=%2F" target="_blank" class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl hover:from-purple-600 hover:to-pink-600 transition-colors shadow-lg flex items-center justify-center hover:scale-110 transform transition-transform">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact form -->
+                <div class="fade-in">
+                    
+                    <form class="space-y-6 bg-white p-8 rounded-2xl shadow-lg" id="contact-form" action="mailto:surandhami13@gmail.com" method="post" enctype="text/plain">
+                        <!-- Name input -->
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-3">Full Name</label>
+                            <input type="text" name="name" class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" placeholder="Your Full Name" required>
+                        </div>
+                        
+                        <!-- Email input -->
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-3">Email Address</label>
+                            <input type="email" name="email" class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" placeholder="your@email.com" required>
+                        </div>
+                        
+                        <!-- Message input -->
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-3">Message</label>
+                            <textarea rows="5" name="message" class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" placeholder="Tell me about your project or inquiry..." required></textarea>
+                        </div>
+                        
+                        <!-- Submit button -->
+                        <button type="submit" class="w-full modern-btn text-white py-4 rounded-xl font-semibold transition-all">
+                            Send Message
+                        </button>
+                        
+                        <!-- Alternative contact note -->
+                        <div class="text-center pt-4 border-t border-gray-200">
+                            <p class="text-gray-600 text-sm mb-3">Or contact me directly:</p>
+                            <div class="flex justify-center space-x-4">
+                                <a href="mailto:surandhami13@gmail.com" class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg hover:bg-blue-200 transition-colors text-sm font-medium flex items-center space-x-2">
+                                    <span>📧</span>
+                                    <span>Email</span>
+                                </a>
+                                <button onclick="openWhatsApp()" class="bg-green-100 text-green-800 px-4 py-2 rounded-lg hover:bg-green-200 transition-colors text-sm font-medium flex items-center space-x-2">
+                                    <span>💬</span>
+                                    <span>WhatsApp</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER SECTION ===== -->
+    <!-- Website footer with profile information and copyright -->
+    <footer class="footer-bg text-white py-12 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
+      
+      <!-- Left Section: Identity -->
+      <div>
+        <div class="w-16 h-16 mx-auto md:mx-0 mb-4 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-xl font-bold">
+          SD
+        </div>
+        <h3 class="text-xl font-semibold mb-1">Suransingh Dhami</h3>
+        <p class="text-gray-400 text-sm">Computer Science Engineer</p>
+        <p class="text-gray-500 text-xs mt-2">
+          &copy; 2024. Built with ❤️ and modern web technologies.
+        </p>
+      </div>
+
+      <!-- Middle Section: Social Media Grid -->
+      <div class="grid grid-cols-2 gap-4 justify-items-center">
+        <a href="https://github.com/yourusername" target="_blank" class="text-gray-400 hover:text-white text-xl transition">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://facebook.com/yourprofile" target="_blank" class="text-gray-400 hover:text-white text-xl transition">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com/yourprofile" target="_blank" class="text-gray-400 hover:text-white text-xl transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://x.com/yourhandle" target="_blank" class="text-gray-400 hover:text-white text-xl transition">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="mailto:youremail@example.com" class="text-gray-400 hover:text-white text-xl transition">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-gray-400 hover:text-white text-xl transition">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+
+      <!-- Right Section: Shiv Tandav Verse -->
+      <div class="text-right">
+        <p class="text-sm text-gray-300 leading-relaxed font-medium">
+          जटाटवीगलज्जलप्रवाहपावितस्थले <br>
+          गलेऽवलम्ब्य लम्बितां भुजङ्गतुङ्गमालिकाम् ।<br>
+          डमड्डमड्डमड्डमन्निनादवड्डमर्वयं <br>
+          चकार चण्डताण्डवं तनोतु नः शिवः शिवम् ॥१॥
+        </p>
+        <p class="text-xs text-gray-400 mt-2 italic">
+          – शिव तांडव स्तोत्रम्
+        </p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+ 
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 id="project-modal-title" class="text-2xl font-bold text-gray-800"></h3>
+                        <button onclick="closeProjectModal()" class="text-gray-500 hover:text-gray-700 text-3xl font-light">&times;</button>
+                    </div>
+                    <div id="project-modal-content" class="space-y-4">
+                        <!-- Content will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificate Details Modal -->
+    <div id="certificate-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 id="certificate-modal-title" class="text-2xl font-bold text-gray-800"></h3>
+                        <button onclick="closeCertificateModal()" class="text-gray-500 hover:text-gray-700 text-3xl font-light">&times;</button>
+                    </div>
+                    <div id="certificate-modal-content" class="space-y-4">
+                        <!-- Content will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Login Modal -->
+    <div id="settings-login-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-2xl max-w-md w-full">
+                <div class="p-8">
+                    <div class="text-center mb-8">
+                        <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center text-3xl text-white shadow-lg">
+                            🔐
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Authorized Access Only</h3>
+                        <p class="text-gray-600">Enter permanent credentials to access website settings</p>
+                        <div class="mt-3 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                            <p class="text-blue-800 text-sm font-semibold">🔑 Permanent Login Required</p>
+                            <p class="text-blue-600 text-xs mt-1">Only authorized user can access the website manager</p>
+                        </div>
+                    </div>
+                    
+                    <form id="settings-login-form" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Username</label>
+                            <input type="text" id="settings-username" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Enter username" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Password</label>
+                            <input type="password" id="settings-password" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Enter password" required>
+                        </div>
+                        
+                        <div id="login-error" class="hidden bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                            <div class="flex items-center space-x-2">
+                                <span>❌</span>
+                                <span>Invalid username or password. Please try again.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <button type="submit" class="flex-1 bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
+                                Access Settings
+                            </button>
+                            <button type="button" onclick="closeSettingsLogin()" class="flex-1 bg-gray-500 text-white py-3 rounded-lg hover:bg-gray-600 transition-colors font-semibold">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- First Time Setup -->
+                    <div id="first-time-setup" class="hidden mt-6 pt-6 border-t border-gray-200">
+                        <div class="text-center mb-4">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">First Time Setup</h4>
+                            <p class="text-gray-600 text-sm">Set your secure credentials for website management</p>
+                        </div>
+                        
+                        <form id="setup-credentials-form" class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Create Username</label>
+                                <input type="text" id="setup-username" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="Choose username" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Create Password</label>
+                                <input type="password" id="setup-password" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="Choose password" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Confirm Password</label>
+                                <input type="password" id="setup-confirm-password" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="Confirm password" required>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold">
+                                Setup Credentials
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Show setup link if no credentials exist -->
+                    <div class="text-center mt-4">
+                        <button id="show-setup-btn" onclick="showFirstTimeSetup()" class="text-purple-600 hover:text-purple-800 text-sm font-medium hidden">
+                            First time? Setup your credentials
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Website Manager Modal -->
+    <div id="website-manager-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-8">
+                    <div class="flex justify-between items-center mb-8">
+                        <h3 class="text-3xl font-bold text-gray-800 flex items-center space-x-3">
+                            <span class="text-4xl">⚙️</span>
+                            <span>Website Manager</span>
+                        </h3>
+                        <button onclick="closeWebsiteManager()" class="text-gray-500 hover:text-gray-700 text-3xl font-light">&times;</button>
+                    </div>
+                    
+                    <!-- Tab Navigation -->
+                    <div class="flex flex-wrap border-b border-gray-200 mb-8">
+                        <button onclick="switchTab('images')" class="tab-btn active px-6 py-3 font-semibold text-purple-600 border-b-2 border-purple-600 transition-colors">
+                            🖼️ Images
+                        </button>
+                        <button onclick="switchTab('projects')" class="tab-btn px-6 py-3 font-semibold text-gray-500 hover:text-purple-600 transition-colors">
+                            💼 Projects
+                        </button>
+                        <button onclick="switchTab('certificates')" class="tab-btn px-6 py-3 font-semibold text-gray-500 hover:text-purple-600 transition-colors">
+                            🏆 Certificates
+                        </button>
+                        <button onclick="switchTab('personal')" class="tab-btn px-6 py-3 font-semibold text-gray-500 hover:text-purple-600 transition-colors">
+                            👤 Personal Info
+                        </button>
+                        <button onclick="switchTab('skills')" class="tab-btn px-6 py-3 font-semibold text-gray-500 hover:text-purple-600 transition-colors">
+                            🎯 Skills
+                        </button>
+                        <button onclick="switchTab('resume')" class="tab-btn px-6 py-3 font-semibold text-gray-500 hover:text-purple-600 transition-colors">
+                            📄 Resume
+                        </button>
+                    </div>
+
+                    <!-- Images Tab -->
+                    <div id="images-tab" class="tab-content">
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Profile Images -->
+                            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 border border-blue-200">
+                                <div class="text-center mb-4">
+                                    <div class="w-16 h-16 mx-auto mb-3 bg-blue-600 rounded-2xl flex items-center justify-center text-2xl text-white">👤</div>
+                                    <h4 class="text-lg font-semibold text-gray-800">Profile Images</h4>
+                                    <p class="text-gray-600 text-sm">Update navigation and popup profile photos</p>
+                                </div>
+                                <div class="space-y-3">
+                                    <button onclick="changeImage('nav-profile')" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">Change Navigation Profile</button>
+                                    <button onclick="changeImage('popup-profile')" class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors text-sm font-medium">Change Popup Profile</button>
+                                </div>
+                            </div>
+
+                            <!-- Homepage Image -->
+                            <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 border border-green-200">
+                                <div class="text-center mb-4">
+                                    <div class="w-16 h-16 mx-auto mb-3 bg-green-600 rounded-2xl flex items-center justify-center text-2xl text-white">🏠</div>
+                                    <h4 class="text-lg font-semibold text-gray-800">Homepage Image</h4>
+                                    <p class="text-gray-600 text-sm">Update main hero section image</p>
+                                </div>
+                                <button onclick="changeImage('homepage')" class="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-sm font-medium">Change Homepage Image</button>
+                            </div>
+
+                            <!-- Certificate Images -->
+                            <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 border border-orange-200">
+                                <div class="text-center mb-4">
+                                    <div class="w-16 h-16 mx-auto mb-3 bg-orange-600 rounded-2xl flex items-center justify-center text-2xl text-white">🏆</div>
+                                    <h4 class="text-lg font-semibold text-gray-800">Certificate Images</h4>
+                                    <p class="text-gray-600 text-sm">Update all certificate images</p>
+                                </div>
+                                <div class="space-y-2 max-h-40 overflow-y-auto">
+                                    <button onclick="changeImage('cert-aws')" class="w-full bg-orange-600 text-white py-2 px-3 rounded-lg hover:bg-orange-700 transition-colors text-xs font-medium">AWS Certificate</button>
+                                    <button onclick="changeImage('cert-gcp')" class="w-full bg-orange-500 text-white py-2 px-3 rounded-lg hover:bg-orange-600 transition-colors text-xs font-medium">Google Cloud Certificate</button>
+                                    <button onclick="changeImage('cert-azure')" class="w-full bg-orange-500 text-white py-2 px-3 rounded-lg hover:bg-orange-600 transition-colors text-xs font-medium">Azure Certificate</button>
+                                    <button onclick="changeImage('cert-kubernetes')" class="w-full bg-orange-500 text-white py-2 px-3 rounded-lg hover:bg-orange-600 transition-colors text-xs font-medium">Kubernetes Certificate</button>
+                                </div>
+                            </div>
+
+                            <!-- Hobby Images -->
+                            <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-6 border border-pink-200">
+                                <div class="text-center mb-4">
+                                    <div class="w-16 h-16 mx-auto mb-3 bg-pink-600 rounded-2xl flex items-center justify-center text-2xl text-white">🎨</div>
+                                    <h4 class="text-lg font-semibold text-gray-800">Hobby Images</h4>
+                                    <p class="text-gray-600 text-sm">Update all hobby section images</p>
+                                </div>
+                                <div class="space-y-2 max-h-40 overflow-y-auto">
+                                    <button onclick="changeImage('hobby-coding')" class="w-full bg-pink-600 text-white py-2 px-3 rounded-lg hover:bg-pink-700 transition-colors text-xs font-medium">Competitive Programming</button>
+                                    <button onclick="changeImage('hobby-reading')" class="w-full bg-pink-500 text-white py-2 px-3 rounded-lg hover:bg-pink-600 transition-colors text-xs font-medium">Technical Reading</button>
+                                    <button onclick="changeImage('hobby-gaming')" class="w-full bg-pink-500 text-white py-2 px-3 rounded-lg hover:bg-pink-600 transition-colors text-xs font-medium">Gaming</button>
+                                    <button onclick="changeImage('hobby-photography')" class="w-full bg-pink-500 text-white py-2 px-3 rounded-lg hover:bg-pink-600 transition-colors text-xs font-medium">Photography</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projects Tab -->
+                    <div id="projects-tab" class="tab-content hidden">
+                        <div class="mb-6">
+                            <button onclick="openAddProjectModal()" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold flex items-center space-x-2">
+                                <span>➕</span>
+                                <span>Add New Project</span>
+                            </button>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6" id="projects-list">
+                            <!-- Projects will be populated here -->
+                        </div>
+                    </div>
+
+                    <!-- Certificates Tab -->
+                    <div id="certificates-tab" class="tab-content hidden">
+                        <div class="mb-6">
+                            <button onclick="openAddCertificateModal()" class="bg-yellow-600 text-white px-6 py-3 rounded-lg hover:bg-yellow-700 transition-colors font-semibold flex items-center space-x-2">
+                                <span>➕</span>
+                                <span>Add New Certificate</span>
+                            </button>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="certificates-list">
+                            <!-- Certificates will be populated here -->
+                        </div>
+                    </div>
+
+                    <!-- Personal Info Tab -->
+                    <div id="personal-tab" class="tab-content hidden">
+                        <div class="max-w-2xl mx-auto">
+                            <form id="personal-info-form" class="space-y-6">
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Full Name</label>
+                                        <input type="text" id="personal-name" value="Suransingh Dhami" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Title</label>
+                                        <input type="text" id="personal-title" value="Computer Science Engineer" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    </div>
+                                </div>
+                                
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                                        <input type="email" id="personal-email" value="suransingh.dhami@email.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Phone</label>
+                                        <input type="text" id="personal-phone" value="+91 98765 43210" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    </div>
+                                </div>
+                                
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Location</label>
+                                        <input type="text" id="personal-location" value="India" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-700 font-semibold mb-2">Age</label>
+                                        <input type="text" id="personal-age" value="25 years old" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-2">About Description</label>
+                                    <textarea id="personal-about" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">As a Computer Science Engineer, I've developed a strong foundation in software development, algorithms, and system design. My journey began with curiosity about how technology works and evolved into a passion for creating solutions that make a difference.</textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
+                                    Update Personal Information
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Skills Tab -->
+                    <div id="skills-tab" class="tab-content hidden">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <!-- Frontend Skills -->
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                                    <span class="text-2xl mr-2">🎨</span>
+                                    Frontend Skills
+                                </h4>
+                                <div class="space-y-4" id="frontend-skills">
+                                    <!-- Skills will be populated here -->
+                                </div>
+                                <button onclick="addSkill('frontend')" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                                    ➕ Add Frontend Skill
+                                </button>
+                            </div>
+                            
+                            <!-- Backend Skills -->
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                                    <span class="text-2xl mr-2">⚙️</span>
+                                    Backend Skills
+                                </h4>
+                                <div class="space-y-4" id="backend-skills">
+                                    <!-- Skills will be populated here -->
+                                </div>
+                                <button onclick="addSkill('backend')" class="mt-4 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors text-sm">
+                                    ➕ Add Backend Skill
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resume Tab -->
+                    <div id="resume-tab" class="tab-content hidden">
+                        <div class="max-w-4xl mx-auto">
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <!-- Current Resume Section -->
+                                <div class="bg-white rounded-2xl shadow-lg p-8">
+                                    <div class="text-center mb-6">
+                                        <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-3xl text-white shadow-lg">
+                                            📄
+                                        </div>
+                                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Current Resume</h4>
+                                        <p class="text-gray-600 text-sm">Manage your resume file that visitors can download</p>
+                                    </div>
+                                    
+                                    <!-- Resume Status -->
+                                    <div id="resume-status" class="mb-6">
+                                        <div class="bg-gray-50 rounded-xl p-4 text-center">
+                                            <div class="text-4xl mb-2">📁</div>
+                                            <p class="text-gray-600 text-sm">No resume uploaded yet</p>
+                                            <p class="text-gray-500 text-xs mt-1">Upload a PDF resume file</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Upload Resume Button -->
+                                    <div class="space-y-4">
+                                        <button onclick="document.getElementById('resume-upload').click()" class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center justify-center space-x-2">
+                                            <span>📤</span>
+                                            <span>Upload New Resume</span>
+                                        </button>
+                                        
+                                        <button id="download-current-resume" onclick="downloadCurrentResume()" class="w-full bg-green-600 text-white py-3 px-4 rounded-lg hover:bg-green-700 transition-colors font-semibold flex items-center justify-center space-x-2 hidden">
+                                            <span>📥</span>
+                                            <span>Download Current Resume</span>
+                                        </button>
+                                        
+                                        <button id="remove-resume" onclick="removeCurrentResume()" class="w-full bg-red-600 text-white py-3 px-4 rounded-lg hover:bg-red-700 transition-colors font-semibold flex items-center justify-center space-x-2 hidden">
+                                            <span>🗑️</span>
+                                            <span>Remove Resume</span>
+                                        </button>
+                                    </div>
+                                    
+                                    <!-- Hidden file input -->
+                                    <input type="file" id="resume-upload" accept=".pdf" class="hidden" onchange="handleResumeUpload(this)">
+                                </div>
+                                
+                                <!-- Resume Information Section -->
+                                <div class="bg-white rounded-2xl shadow-lg p-8">
+                                    <div class="text-center mb-6">
+                                        <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center text-3xl text-white shadow-lg">
+                                            ℹ️
+                                        </div>
+                                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Resume Information</h4>
+                                        <p class="text-gray-600 text-sm">Details about your resume file</p>
+                                    </div>
+                                    
+                                    <!-- Resume Details -->
+                                    <div class="space-y-4" id="resume-details">
+                                        <div class="bg-gray-50 rounded-lg p-4">
+                                            <div class="flex items-center space-x-3 mb-2">
+                                                <span class="text-xl">📊</span>
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-sm">File Status</p>
+                                                    <p class="text-gray-600 text-xs" id="file-status">No file uploaded</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-gray-50 rounded-lg p-4">
+                                            <div class="flex items-center space-x-3 mb-2">
+                                                <span class="text-xl">📏</span>
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-sm">File Size</p>
+                                                    <p class="text-gray-600 text-xs" id="file-size-display">-</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-gray-50 rounded-lg p-4">
+                                            <div class="flex items-center space-x-3 mb-2">
+                                                <span class="text-xl">📅</span>
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-sm">Last Updated</p>
+                                                    <p class="text-gray-600 text-xs" id="last-updated">-</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bg-gray-50 rounded-lg p-4">
+                                            <div class="flex items-center space-x-3 mb-2">
+                                                <span class="text-xl">👥</span>
+                                                <div>
+                                                    <p class="font-semibold text-gray-800 text-sm">Download Count</p>
+                                                    <p class="text-gray-600 text-xs" id="download-count">0 downloads</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Instructions -->
+                                    <div class="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                                        <h5 class="font-semibold text-blue-800 text-sm mb-2">📋 Instructions</h5>
+                                        <ul class="text-blue-700 text-xs space-y-1">
+                                            <li>• Upload only PDF files (max 10MB)</li>
+                                            <li>• Resume will be available for download on homepage</li>
+                                            <li>• Replace anytime with a new version</li>
+                                            <li>• Keep your resume updated regularly</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden file input for image uploads -->
+    <input type="file" id="image-upload-input" accept="image/*" class="hidden" onchange="handleImageUpload(this)">
+
+    <!-- Add/Edit Project Modal -->
+    <div id="project-modal-form" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 id="project-form-title" class="text-2xl font-bold text-gray-800">Add New Project</h3>
+                        <button onclick="closeProjectForm()" class="text-gray-500 hover:text-gray-700 text-3xl font-light">&times;</button>
+                    </div>
+                    
+                    <form id="project-form" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Project Title</label>
+                            <input type="text" id="project-title" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Description</label>
+                            <textarea id="project-description" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required></textarea>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Technologies (comma separated)</label>
+                            <input type="text" id="project-technologies" placeholder="React, Node.js, MongoDB" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Key Features (one per line)</label>
+                            <textarea id="project-features" rows="4" placeholder="Feature 1&#10;Feature 2&#10;Feature 3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required></textarea>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Live Demo URL</label>
+                                <input type="url" id="project-demo" placeholder="https://example.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">GitHub URL</label>
+                                <input type="url" id="project-github" placeholder="https://github.com/username/repo" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <button type="submit" class="flex-1 bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold">
+                                Save Project
+                            </button>
+                            <button type="button" onclick="closeProjectForm()" class="flex-1 bg-gray-500 text-white py-3 rounded-lg hover:bg-gray-600 transition-colors font-semibold">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Certificate Modal -->
+    <div id="certificate-modal-form" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 id="certificate-form-title" class="text-2xl font-bold text-gray-800">Add New Certificate</h3>
+                        <button onclick="closeCertificateForm()" class="text-gray-500 hover:text-gray-700 text-3xl font-light">&times;</button>
+                    </div>
+                    
+                    <form id="certificate-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Certificate Title</label>
+                                <input type="text" id="cert-title" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Issuing Organization</label>
+                                <input type="text" id="cert-issuer" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" required>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Issue Date</label>
+                                <input type="text" id="cert-date" placeholder="2024" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Valid Until</label>
+                                <input type="text" id="cert-valid" placeholder="2027 or Lifetime" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Description</label>
+                            <textarea id="cert-description" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" required></textarea>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Skills Validated (comma separated)</label>
+                            <input type="text" id="cert-skills" placeholder="Cloud Architecture, AWS Services, Security" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" required>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Credential ID</label>
+                                <input type="text" id="cert-credential" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Verification URL</label>
+                                <input type="url" id="cert-verification" placeholder="https://verify.example.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" required>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <button type="submit" class="flex-1 bg-yellow-600 text-white py-3 rounded-lg hover:bg-yellow-700 transition-colors font-semibold">
+                                Save Certificate
+                            </button>
+                            <button type="button" onclick="closeCertificateForm()" class="flex-1 bg-gray-500 text-white py-3 rounded-lg hover:bg-gray-600 transition-colors font-semibold">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Project details data
+        const projectDetails = [
+            {
+                title: "E-Learning Platform",
+                description: "A comprehensive full-stack web application designed for online learning with advanced features.",
+                features: [
+                    "User authentication and authorization system",
+                    "Course creation and management tools",
+                    "Interactive video player with progress tracking",
+                    "Real-time chat and discussion forums",
+                    "Assignment submission and grading system",
+                    "Payment integration for course purchases",
+                    "Mobile-responsive design",
+                    "Admin dashboard with analytics"
+                ],
+                technologies: ["React", "Node.js", "MongoDB", "Express.js", "Socket.io", "Stripe API"],
+                challenges: "Implementing real-time features while maintaining performance and scalability.",
+                outcome: "Successfully deployed with 500+ active users and 95% user satisfaction rate."
+            },
+            {
+                title: "Task Management App",
+                description: "Cross-platform mobile application for productivity management with real-time synchronization.",
+                features: [
+                    "Cross-platform compatibility (iOS & Android)",
+                    "Real-time task synchronization",
+                    "Team collaboration features",
+                    "Push notifications and reminders",
+                    "Offline mode with data sync",
+                    "Custom themes and personalization",
+                    "Time tracking and productivity analytics",
+                    "Integration with calendar apps"
+                ],
+                technologies: ["Flutter", "Firebase", "Dart", "Cloud Firestore", "FCM"],
+                challenges: "Ensuring seamless offline-online synchronization and cross-platform consistency.",
+                outcome: "Published on both app stores with 4.8/5 rating and 10,000+ downloads."
+            },
+            {
+                title: "Data Analytics Dashboard",
+                description: "Interactive dashboard for data visualization and business intelligence with real-time analytics.",
+                features: [
+                    "Real-time data visualization",
+                    "Interactive charts and graphs",
+                    "Custom report generation",
+                    "Data filtering and sorting",
+                    "Export functionality (PDF, Excel)",
+                    "User role-based access control",
+                    "API integration for multiple data sources",
+                    "Automated email reports"
+                ],
+                technologies: ["Python", "Django", "PostgreSQL", "Chart.js", "Celery", "Redis"],
+                challenges: "Processing large datasets efficiently while maintaining real-time updates.",
+                outcome: "Reduced report generation time by 80% and improved decision-making speed."
+            },
+            {
+                title: "AI Chatbot System",
+                description: "Intelligent chatbot using natural language processing for customer service automation.",
+                features: [
+                    "Natural language understanding",
+                    "Multi-language support",
+                    "Intent recognition and entity extraction",
+                    "Context-aware conversations",
+                    "Integration with CRM systems",
+                    "Sentiment analysis",
+                    "Automated escalation to human agents",
+                    "Continuous learning from interactions"
+                ],
+                technologies: ["Python", "TensorFlow", "NLP", "NLTK", "spaCy", "Flask"],
+                challenges: "Training the model to understand context and maintain conversation flow.",
+                outcome: "Reduced customer service response time by 70% and handled 85% of queries automatically."
+            },
+            {
+                title: "Blockchain Voting System",
+                description: "Secure and transparent voting system built on blockchain technology for enhanced security.",
+                features: [
+                    "Immutable vote recording",
+                    "Anonymous voting with verification",
+                    "Real-time vote counting",
+                    "Voter identity verification",
+                    "Transparent audit trail",
+                    "Multi-candidate support",
+                    "Mobile and web interfaces",
+                    "Decentralized architecture"
+                ],
+                technologies: ["Solidity", "Web3.js", "Ethereum", "React", "MetaMask"],
+                challenges: "Balancing voter anonymity with vote verification and preventing double voting.",
+                outcome: "Successfully tested with 1000+ participants, achieving 99.9% accuracy and security."
+            },
+            {
+                title: "Smart Home IoT System",
+                description: "Internet of Things solution for home automation with sensor integration and mobile control.",
+                features: [
+                    "Multi-sensor integration",
+                    "Remote device control",
+                    "Automated scheduling",
+                    "Energy consumption monitoring",
+                    "Security system integration",
+                    "Voice control compatibility",
+                    "Mobile app with real-time updates",
+                    "Machine learning for usage patterns"
+                ],
+                technologies: ["Arduino", "Raspberry Pi", "MQTT", "Python", "React Native"],
+                challenges: "Ensuring reliable communication between devices and handling network interruptions.",
+                outcome: "Reduced energy consumption by 30% and improved home security with automated alerts."
+            }
+        ];
+
+        // Certificate details data
+        const certificateDetails = [
+            {
+                title: "AWS Solutions Architect",
+                issuer: "Amazon Web Services",
+                date: "2024",
+                description: "Professional certification demonstrating expertise in designing distributed systems on AWS.",
+                skills: ["Cloud Architecture", "AWS Services", "Security", "Cost Optimization", "High Availability"],
+                validUntil: "2027",
+                credentialId: "AWS-SA-2024-001",
+                verificationUrl: "https://aws.amazon.com/verification"
+            },
+            {
+                title: "Google Cloud Professional",
+                issuer: "Google Cloud Platform",
+                date: "2024",
+                description: "Advanced certification in Google Cloud Platform services and architecture.",
+                skills: ["GCP Services", "Kubernetes", "Data Analytics", "Machine Learning", "DevOps"],
+                validUntil: "2026",
+                credentialId: "GCP-PRO-2024-002",
+                verificationUrl: "https://cloud.google.com/certification"
+            },
+            {
+                title: "Azure Developer Associate",
+                issuer: "Microsoft Azure",
+                date: "2023",
+                description: "Certification for developing and deploying applications on Microsoft Azure.",
+                skills: ["Azure Services", "App Development", "Storage Solutions", "Security", "Monitoring"],
+                validUntil: "2025",
+                credentialId: "AZ-204-2023-003",
+                verificationUrl: "https://docs.microsoft.com/certifications"
+            },
+            {
+                title: "Kubernetes Administrator",
+                issuer: "Cloud Native Computing Foundation",
+                date: "2023",
+                description: "Certification for Kubernetes cluster administration and management.",
+                skills: ["Container Orchestration", "Cluster Management", "Networking", "Security", "Troubleshooting"],
+                validUntil: "2026",
+                credentialId: "CKA-2023-004",
+                verificationUrl: "https://www.cncf.io/certification"
+            },
+            {
+                title: "Python Professional",
+                issuer: "Python Institute",
+                date: "2023",
+                description: "Advanced Python programming certification covering professional development practices.",
+                skills: ["Advanced Python", "OOP", "Data Structures", "Testing", "Performance Optimization"],
+                validUntil: "Lifetime",
+                credentialId: "PCPP-2023-005",
+                verificationUrl: "https://pythoninstitute.org/certification"
+            },
+            {
+                title: "React Developer",
+                issuer: "Meta (Facebook)",
+                date: "2022",
+                description: "Professional certification in React development and modern frontend practices.",
+                skills: ["React.js", "JSX", "State Management", "Hooks", "Testing", "Performance"],
+                validUntil: "2025",
+                credentialId: "META-REACT-2022-006",
+                verificationUrl: "https://developers.facebook.com/certification"
+            },
+            {
+                title: "Cybersecurity Specialist",
+                issuer: "CompTIA Security+",
+                date: "2022",
+                description: "Foundational cybersecurity certification covering security concepts and practices.",
+                skills: ["Network Security", "Risk Management", "Cryptography", "Identity Management", "Incident Response"],
+                validUntil: "2025",
+                credentialId: "COMP-SEC-2022-007",
+                verificationUrl: "https://www.comptia.org/certifications"
+            },
+            {
+                title: "Data Science Professional",
+                issuer: "IBM Data Science",
+                date: "2022",
+                description: "Comprehensive data science certification covering analytics and machine learning.",
+                skills: ["Data Analysis", "Machine Learning", "Python", "SQL", "Data Visualization", "Statistics"],
+                validUntil: "Lifetime",
+                credentialId: "IBM-DS-2022-008",
+                verificationUrl: "https://www.ibm.com/training/certification"
+            }
+        ];
+
+        // Profile popup functionality - Shows detailed profile information
+        const profileTrigger = document.getElementById('profile-trigger');
+        const profilePopup = document.getElementById('profile-popup');
+        const closeProfile = document.getElementById('close-profile');
+
+        // Open profile popup when clicking profile icon
+        profileTrigger.addEventListener('click', () => {
+            profilePopup.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        // Close profile popup when clicking close button
+        closeProfile.addEventListener('click', () => {
+            profilePopup.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        });
+
+        // Close profile popup when clicking outside the content
+        profilePopup.addEventListener('click', (e) => {
+            if (e.target === profilePopup) {
+                profilePopup.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // About image upload functionality
+        function handleAboutImageUpload(input) {
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById('about-image-preview');
+                    const placeholder = document.getElementById('about-image-placeholder');
+                    
+                    preview.src = e.target.result;
+                    preview.classList.remove('hidden');
+                    placeholder.style.display = 'none';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Hobby image upload functionality
+        function handleHobbyImageUpload(input, index) {
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const container = input.parentElement.querySelector('.w-24');
+                    const placeholder = container.querySelector('.hobby-placeholder');
+                    const image = container.querySelector('.hobby-image');
+                    
+                    image.src = e.target.result;
+                    image.classList.remove('hidden');
+                    placeholder.style.display = 'none';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Project details modal functions
+        function showProjectDetails(index) {
+            const project = projectDetails[index];
+            const modal = document.getElementById('project-modal');
+            const title = document.getElementById('project-modal-title');
+            const content = document.getElementById('project-modal-content');
+            
+            title.textContent = project.title;
+            content.innerHTML = `
+                <div class="mb-6">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">Project Overview</h4>
+                    <p class="text-gray-600 leading-relaxed">${project.description}</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">Key Features</h4>
+                    <ul class="space-y-2">
+                        ${project.features.map(feature => `<li class="flex items-start space-x-2"><span class="text-blue-600 mt-1">•</span><span class="text-gray-600">${feature}</span></li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">Technologies Used</h4>
+                    <div class="flex flex-wrap gap-2">
+                        ${project.technologies.map(tech => `<span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">${tech}</span>`).join('')}
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">Challenges & Solutions</h4>
+                    <p class="text-gray-600 leading-relaxed">${project.challenges}</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">Project Outcome</h4>
+                    <p class="text-gray-600 leading-relaxed">${project.outcome}</p>
+                </div>
+                
+                <div class="flex space-x-4 pt-4 border-t">
+                    <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">View Live Demo</button>
+                    <button class="bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">View Source Code</button>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('project-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Settings Authentication System - Permanent Credentials
+        const PERMANENT_CREDENTIALS = {
+            username: 'SURANSINGHDHAMI',
+            password: '7695948951'
+        };
+
+        let settingsCredentials = {
+            username: PERMANENT_CREDENTIALS.username,
+            password: PERMANENT_CREDENTIALS.password,
+            isSetup: true
+        };
+
+        // Check if credentials are stored in localStorage (not needed for permanent setup)
+        function loadStoredCredentials() {
+            // Always use permanent credentials
+            settingsCredentials = {
+                username: PERMANENT_CREDENTIALS.username,
+                password: PERMANENT_CREDENTIALS.password,
+                isSetup: true
+            };
+        }
+
+        // Save credentials to localStorage (not needed for permanent setup)
+        function saveCredentials(username, password) {
+            // Always maintain permanent credentials
+            settingsCredentials = {
+                username: PERMANENT_CREDENTIALS.username,
+                password: PERMANENT_CREDENTIALS.password,
+                isSetup: true
+            };
+        }
+
+        // Open settings login modal
+        function openSettingsLogin() {
+            loadStoredCredentials();
+            const modal = document.getElementById('settings-login-modal');
+            const setupBtn = document.getElementById('show-setup-btn');
+            const loginForm = document.getElementById('settings-login-form');
+            const setupForm = document.getElementById('first-time-setup');
+            
+            // Reset forms
+            document.getElementById('settings-login-form').reset();
+            document.getElementById('login-error').classList.add('hidden');
+            
+            // Always hide setup options since credentials are permanent
+            setupBtn.classList.add('hidden');
+            
+            // Show login form by default
+            loginForm.classList.remove('hidden');
+            setupForm.classList.add('hidden');
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close settings login modal
+        function closeSettingsLogin() {
+            const modal = document.getElementById('settings-login-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Show first time setup form
+        function showFirstTimeSetup() {
+            const loginForm = document.getElementById('settings-login-form');
+            const setupForm = document.getElementById('first-time-setup');
+            const setupBtn = document.getElementById('show-setup-btn');
+            
+            loginForm.classList.add('hidden');
+            setupForm.classList.remove('hidden');
+            setupBtn.classList.add('hidden');
+        }
+
+        // Handle settings login
+        document.getElementById('settings-login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('settings-username').value;
+            const password = document.getElementById('settings-password').value;
+            const errorDiv = document.getElementById('login-error');
+            
+            // Check against permanent credentials
+            if (username === PERMANENT_CREDENTIALS.username && 
+                password === PERMANENT_CREDENTIALS.password) {
+                
+                // Successful login
+                closeSettingsLogin();
+                
+                // Close profile popup
+                const profilePopup = document.getElementById('profile-popup');
+                profilePopup.style.display = 'none';
+                
+                // Show success message
+                setTimeout(() => {
+                    alert('🎉 Welcome Suransingh! Access granted to Website Manager.');
+                }, 100);
+                
+                // Open website manager
+                setTimeout(() => {
+                    openWebsiteManager();
+                }, 500);
+                
+            } else {
+                // Show error
+                errorDiv.classList.remove('hidden');
+                
+                // Clear password field
+                document.getElementById('settings-password').value = '';
+                
+                // Show specific error message
+                errorDiv.innerHTML = `
+                    <div class="flex items-center space-x-2">
+                        <span>❌</span>
+                        <span>Access Denied! Only authorized user can access settings.</span>
+                    </div>
+                `;
+                
+                // Hide error after 5 seconds
+                setTimeout(() => {
+                    errorDiv.classList.add('hidden');
+                }, 5000);
+            }
+        });
+
+        // Setup functionality disabled - using permanent credentials
+        document.getElementById('setup-credentials-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Redirect to login since setup is not needed
+            alert('⚠️ Setup is not available. Please use the permanent login credentials.');
+            
+            // Show login form
+            const loginForm = document.getElementById('settings-login-form');
+            const setupForm = document.getElementById('first-time-setup');
+            
+            loginForm.classList.remove('hidden');
+            setupForm.classList.add('hidden');
+        });
+
+        // Website Manager functionality
+        let currentImageType = '';
+        let currentEditingProject = null;
+        let currentEditingCertificate = null;
+        let websiteData = {
+            projects: [...projectDetails],
+            certificates: [...certificateDetails],
+            skills: {
+                frontend: [
+                    { name: 'React/Next.js', level: 90 },
+                    { name: 'JavaScript/TypeScript', level: 85 },
+                    { name: 'Vue.js/Angular', level: 80 }
+                ],
+                backend: [
+                    { name: 'Node.js/Express', level: 85 },
+                    { name: 'Python/Django', level: 80 },
+                    { name: 'MongoDB/PostgreSQL', level: 75 }
+                ]
+            }
+        };
+
+        // Open website manager modal
+        function openWebsiteManager() {
+            const modal = document.getElementById('website-manager-modal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            // Initialize with images tab
+            switchTab('images');
+            populateProjectsList();
+            populateCertificatesList();
+            populateSkillsList();
+            updateResumeStatus();
+            updateResumeDownloadCount();
+        }
+
+        // Close website manager modal
+        function closeWebsiteManager() {
+            const modal = document.getElementById('website-manager-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Switch between tabs
+        function switchTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
+            
+            // Remove active class from all tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active', 'text-purple-600', 'border-b-2', 'border-purple-600');
+                btn.classList.add('text-gray-500');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName + '-tab').classList.remove('hidden');
+            
+            // Add active class to selected tab button
+            event.target.classList.add('active', 'text-purple-600', 'border-b-2', 'border-purple-600');
+            event.target.classList.remove('text-gray-500');
+        }
+
+        // Change specific image
+        function changeImage(imageType) {
+            currentImageType = imageType;
+            const input = document.getElementById('image-upload-input');
+            input.click();
+        }
+
+        // Handle image upload
+        function handleImageUpload(input) {
+            const file = input.files[0];
+            if (!file) return;
+
+            // Check file size (5MB limit)
+            if (file.size > 5 * 1024 * 1024) {
+                alert('File size must be less than 5MB');
+                return;
+            }
+
+            // Check file type
+            if (!file.type.startsWith('image/')) {
+                alert('Please select a valid image file');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const imageUrl = e.target.result;
+                updateImageOnSite(currentImageType, imageUrl);
+                
+                // Show success message
+                const imageNames = {
+                    'nav-profile': 'Navigation Profile Image',
+                    'popup-profile': 'Popup Profile Image',
+                    'homepage': 'Homepage Image',
+                    'about': 'About Section Image',
+                    'cert-aws': 'AWS Certificate Image',
+                    'cert-gcp': 'Google Cloud Certificate Image',
+                    'cert-azure': 'Azure Certificate Image',
+                    'cert-kubernetes': 'Kubernetes Certificate Image',
+                    'cert-python': 'Python Certificate Image',
+                    'cert-react': 'React Certificate Image',
+                    'cert-security': 'Security Certificate Image',
+                    'cert-datascience': 'Data Science Certificate Image',
+                    'hobby-coding': 'Competitive Programming Image',
+                    'hobby-reading': 'Technical Reading Image',
+                    'hobby-gaming': 'Gaming Image',
+                    'hobby-photography': 'Photography Image',
+                    'hobby-music': 'Music Image',
+                    'hobby-fitness': 'Fitness Image',
+                    'hobby-travel': 'Travel Image',
+                    'hobby-opensource': 'Open Source Image'
+                };
+                
+                alert(`✅ ${imageNames[currentImageType]} updated successfully!`);
+            };
+            reader.readAsDataURL(file);
+            
+            // Clear the input
+            input.value = '';
+        }
+
+        // Update image on the website
+        function updateImageOnSite(imageType, imageUrl) {
+            switch(imageType) {
+                case 'nav-profile':
+                    // Update navigation profile image
+                    document.querySelector('.profile-image').src = imageUrl;
+                    break;
+                    
+                case 'popup-profile':
+                    // Update popup profile image
+                    document.querySelector('.profile-popup-image').src = imageUrl;
+                    break;
+                    
+                case 'homepage':
+                    // Update homepage main image
+                    document.querySelector('.homepage-image').src = imageUrl;
+                    break;
+                    
+                case 'about':
+                    // Update about section image
+                    const aboutPreview = document.getElementById('about-image-preview');
+                    const aboutPlaceholder = document.getElementById('about-image-placeholder');
+                    aboutPreview.src = imageUrl;
+                    aboutPreview.classList.remove('hidden');
+                    aboutPlaceholder.style.display = 'none';
+                    break;
+                    
+                case 'cert-aws':
+                    updateCertificateImage(0, imageUrl);
+                    break;
+                case 'cert-gcp':
+                    updateCertificateImage(1, imageUrl);
+                    break;
+                case 'cert-azure':
+                    updateCertificateImage(2, imageUrl);
+                    break;
+                case 'cert-kubernetes':
+                    updateCertificateImage(3, imageUrl);
+                    break;
+                case 'cert-python':
+                    updateCertificateImage(4, imageUrl);
+                    break;
+                case 'cert-react':
+                    updateCertificateImage(5, imageUrl);
+                    break;
+                case 'cert-security':
+                    updateCertificateImage(6, imageUrl);
+                    break;
+                case 'cert-datascience':
+                    updateCertificateImage(7, imageUrl);
+                    break;
+                    
+                case 'hobby-coding':
+                    updateHobbyImage(0, imageUrl);
+                    break;
+                case 'hobby-reading':
+                    updateHobbyImage(1, imageUrl);
+                    break;
+                case 'hobby-gaming':
+                    updateHobbyImage(2, imageUrl);
+                    break;
+                case 'hobby-photography':
+                    updateHobbyImage(3, imageUrl);
+                    break;
+                case 'hobby-music':
+                    updateHobbyImage(4, imageUrl);
+                    break;
+                case 'hobby-fitness':
+                    updateHobbyImage(5, imageUrl);
+                    break;
+                case 'hobby-travel':
+                    updateHobbyImage(6, imageUrl);
+                    break;
+                case 'hobby-opensource':
+                    updateHobbyImage(7, imageUrl);
+                    break;
+            }
+        }
+
+        // Update certificate image by index
+        function updateCertificateImage(index, imageUrl) {
+            const certImages = document.querySelectorAll('.certification-image');
+            if (certImages[index]) {
+                certImages[index].src = imageUrl;
+            }
+        }
+
+        // Update hobby image by index
+        function updateHobbyImage(index, imageUrl) {
+            const hobbyContainers = document.querySelectorAll('#hobbies .w-24');
+            if (hobbyContainers[index]) {
+                const placeholder = hobbyContainers[index].querySelector('.hobby-placeholder');
+                const image = hobbyContainers[index].querySelector('.hobby-image');
+                
+                image.src = imageUrl;
+                image.classList.remove('hidden');
+                placeholder.style.display = 'none';
+            }
+        }
+
+        // Reset all images to default
+        function resetAllImages() {
+            if (confirm('Are you sure you want to reset all images to default? This action cannot be undone.')) {
+                // Reset profile images
+                document.querySelector('.profile-image').src = 'path/to/your/profile-image.jpg';
+                document.querySelector('.profile-popup-image').src = 'path/to/your/profile-image.jpg';
+                
+                // Reset homepage image
+                document.querySelector('.homepage-image').src = 'path/to/your/homepage-image.jpg';
+                
+                // Reset about image
+                const aboutPreview = document.getElementById('about-image-preview');
+                const aboutPlaceholder = document.getElementById('about-image-placeholder');
+                aboutPreview.classList.add('hidden');
+                aboutPlaceholder.style.display = 'block';
+                
+                // Reset certificate images
+                const certImages = document.querySelectorAll('.certification-image');
+                const certPaths = [
+                    'path/to/your/aws-certificate.jpg',
+                    'path/to/your/gcp-certificate.jpg',
+                    'path/to/your/azure-certificate.jpg',
+                    'path/to/your/kubernetes-certificate.jpg',
+                    'path/to/your/python-certificate.jpg',
+                    'path/to/your/react-certificate.jpg',
+                    'path/to/your/security-certificate.jpg',
+                    'path/to/your/datascience-certificate.jpg'
+                ];
+                certImages.forEach((img, index) => {
+                    img.src = certPaths[index];
+                });
+                
+                // Reset hobby images
+                const hobbyContainers = document.querySelectorAll('#hobbies .w-24');
+                const hobbyEmojis = ['💻', '📚', '🎮', '📸', '🎵', '🏃‍♂️', '✈️', '🌟'];
+                hobbyContainers.forEach((container, index) => {
+                    const placeholder = container.querySelector('.hobby-placeholder');
+                    const image = container.querySelector('.hobby-image');
+                    
+                    image.classList.add('hidden');
+                    placeholder.style.display = 'block';
+                    placeholder.textContent = hobbyEmojis[index];
+                });
+                
+                alert('✅ All images have been reset to default!');
+            }
+        }
+
+        // Export image settings (placeholder function)
+        function exportImageSettings() {
+            const settings = {
+                timestamp: new Date().toISOString(),
+                message: 'Image settings exported successfully!',
+                note: 'In a real implementation, this would export all current image URLs and settings.'
+            };
+            
+            console.log('Image Settings Export:', settings);
+            alert('📁 Image settings exported! Check the browser console for details.\n\nIn a real implementation, this would download a configuration file with all your current image settings.');
+        }
+
+        // Projects Management Functions
+        function populateProjectsList() {
+            const container = document.getElementById('projects-list');
+            container.innerHTML = '';
+            
+            websiteData.projects.forEach((project, index) => {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'bg-white rounded-xl shadow-lg p-6 border border-gray-200';
+                projectCard.innerHTML = `
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-lg font-semibold text-gray-800">${project.title}</h4>
+                        <div class="flex space-x-2">
+                            <button onclick="editProject(${index})" class="text-blue-600 hover:text-blue-800 p-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                                </svg>
+                            </button>
+                            <button onclick="deleteProject(${index})" class="text-red-600 hover:text-red-800 p-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">${project.description}</p>
+                    <div class="flex flex-wrap gap-1">
+                        ${project.technologies.map(tech => `<span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">${tech}</span>`).join('')}
+                    </div>
+                `;
+                container.appendChild(projectCard);
+            });
+        }
+
+        function openAddProjectModal() {
+            currentEditingProject = null;
+            document.getElementById('project-form-title').textContent = 'Add New Project';
+            document.getElementById('project-form').reset();
+            document.getElementById('project-modal-form').classList.remove('hidden');
+        }
+
+        function editProject(index) {
+            currentEditingProject = index;
+            const project = websiteData.projects[index];
+            
+            document.getElementById('project-form-title').textContent = 'Edit Project';
+            document.getElementById('project-title').value = project.title;
+            document.getElementById('project-description').value = project.description;
+            document.getElementById('project-technologies').value = project.technologies.join(', ');
+            document.getElementById('project-features').value = project.features.join('\n');
+            document.getElementById('project-demo').value = project.demoUrl || '';
+            document.getElementById('project-github').value = project.githubUrl || '';
+            
+            document.getElementById('project-modal-form').classList.remove('hidden');
+        }
+
+        function deleteProject(index) {
+            if (confirm('Are you sure you want to delete this project? This action cannot be undone.')) {
+                websiteData.projects.splice(index, 1);
+                populateProjectsList();
+                updateProjectsOnWebsite();
+                showSuccessMessage('Project deleted successfully!');
+            }
+        }
+
+        function closeProjectForm() {
+            document.getElementById('project-modal-form').classList.add('hidden');
+        }
+
+        // Certificates Management Functions
+        function populateCertificatesList() {
+            const container = document.getElementById('certificates-list');
+            container.innerHTML = '';
+            
+            websiteData.certificates.forEach((cert, index) => {
+                const certCard = document.createElement('div');
+                certCard.className = 'bg-white rounded-xl shadow-lg p-6 border border-gray-200';
+                certCard.innerHTML = `
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-lg font-semibold text-gray-800">${cert.title}</h4>
+                        <div class="flex space-x-2">
+                            <button onclick="editCertificate(${index})" class="text-blue-600 hover:text-blue-800 p-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                                </svg>
+                            </button>
+                            <button onclick="deleteCertificate(${index})" class="text-red-600 hover:text-red-800 p-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-2">${cert.issuer}</p>
+                    <p class="text-gray-500 text-xs mb-3">${cert.date} - ${cert.validUntil}</p>
+                    <div class="flex flex-wrap gap-1">
+                        ${cert.skills.slice(0, 3).map(skill => `<span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">${skill}</span>`).join('')}
+                        ${cert.skills.length > 3 ? `<span class="text-gray-500 text-xs">+${cert.skills.length - 3} more</span>` : ''}
+                    </div>
+                `;
+                container.appendChild(certCard);
+            });
+        }
+
+        function openAddCertificateModal() {
+            currentEditingCertificate = null;
+            document.getElementById('certificate-form-title').textContent = 'Add New Certificate';
+            document.getElementById('certificate-form').reset();
+            document.getElementById('certificate-modal-form').classList.remove('hidden');
+        }
+
+        function editCertificate(index) {
+            currentEditingCertificate = index;
+            const cert = websiteData.certificates[index];
+            
+            document.getElementById('certificate-form-title').textContent = 'Edit Certificate';
+            document.getElementById('cert-title').value = cert.title;
+            document.getElementById('cert-issuer').value = cert.issuer;
+            document.getElementById('cert-date').value = cert.date;
+            document.getElementById('cert-valid').value = cert.validUntil;
+            document.getElementById('cert-description').value = cert.description;
+            document.getElementById('cert-skills').value = cert.skills.join(', ');
+            document.getElementById('cert-credential').value = cert.credentialId;
+            document.getElementById('cert-verification').value = cert.verificationUrl;
+            
+            document.getElementById('certificate-modal-form').classList.remove('hidden');
+        }
+
+        function deleteCertificate(index) {
+            if (confirm('Are you sure you want to delete this certificate? This action cannot be undone.')) {
+                websiteData.certificates.splice(index, 1);
+                populateCertificatesList();
+                updateCertificatesOnWebsite();
+                showSuccessMessage('Certificate deleted successfully!');
+            }
+        }
+
+        function closeCertificateForm() {
+            document.getElementById('certificate-modal-form').classList.add('hidden');
+        }
+
+        // Skills Management Functions
+        function populateSkillsList() {
+            populateSkillsSection('frontend');
+            populateSkillsSection('backend');
+        }
+
+        function populateSkillsSection(type) {
+            const container = document.getElementById(type + '-skills');
+            container.innerHTML = '';
+            
+            websiteData.skills[type].forEach((skill, index) => {
+                const skillDiv = document.createElement('div');
+                skillDiv.className = 'bg-white rounded-lg p-4 border border-gray-200';
+                skillDiv.innerHTML = `
+                    <div class="flex justify-between items-center mb-2">
+                        <input type="text" value="${skill.name}" onchange="updateSkillName('${type}', ${index}, this.value)" class="font-medium text-gray-800 bg-transparent border-none p-0 focus:ring-0 flex-1">
+                        <button onclick="removeSkill('${type}', ${index})" class="text-red-600 hover:text-red-800 ml-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <input type="range" min="0" max="100" value="${skill.level}" onchange="updateSkillLevel('${type}', ${index}, this.value)" class="flex-1">
+                        <span class="text-sm font-semibold text-gray-600 w-12">${skill.level}%</span>
+                    </div>
+                `;
+                container.appendChild(skillDiv);
+            });
+        }
+
+        function addSkill(type) {
+            const skillName = prompt(`Enter ${type} skill name:`);
+            if (skillName && skillName.trim()) {
+                websiteData.skills[type].push({
+                    name: skillName.trim(),
+                    level: 50
+                });
+                populateSkillsSection(type);
+                updateSkillsOnWebsite();
+            }
+        }
+
+        function removeSkill(type, index) {
+            if (confirm('Are you sure you want to remove this skill?')) {
+                websiteData.skills[type].splice(index, 1);
+                populateSkillsSection(type);
+                updateSkillsOnWebsite();
+            }
+        }
+
+        function updateSkillName(type, index, newName) {
+            websiteData.skills[type][index].name = newName;
+            updateSkillsOnWebsite();
+        }
+
+        function updateSkillLevel(type, index, newLevel) {
+            websiteData.skills[type][index].level = parseInt(newLevel);
+            // Update the display
+            event.target.nextElementSibling.textContent = newLevel + '%';
+            updateSkillsOnWebsite();
+        }
+
+        // Update website content functions
+        function updateProjectsOnWebsite() {
+            // This would update the actual projects section on the website
+            console.log('Projects updated:', websiteData.projects);
+        }
+
+        function updateCertificatesOnWebsite() {
+            // This would update the actual certificates section on the website
+            console.log('Certificates updated:', websiteData.certificates);
+        }
+
+        function updateSkillsOnWebsite() {
+            // Update the skills section on the main website
+            const frontendContainer = document.querySelector('#skills .space-y-6:first-child');
+            const backendContainer = document.querySelector('#skills .space-y-6:last-child');
+            
+            // Update frontend skills
+            frontendContainer.innerHTML = '';
+            websiteData.skills.frontend.forEach(skill => {
+                const skillDiv = document.createElement('div');
+                skillDiv.innerHTML = `
+                    <div class="flex justify-between mb-3">
+                        <span class="text-gray-700 font-medium">${skill.name}</span>
+                        <span class="text-blue-600 font-semibold">${skill.level}%</span>
+                    </div>
+                    <div class="bg-gray-200 rounded-full h-3">
+                        <div class="skill-bar bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full shadow-sm" style="width: ${skill.level}%"></div>
+                    </div>
+                `;
+                frontendContainer.appendChild(skillDiv);
+            });
+            
+            // Update backend skills
+            backendContainer.innerHTML = '';
+            websiteData.skills.backend.forEach(skill => {
+                const skillDiv = document.createElement('div');
+                skillDiv.innerHTML = `
+                    <div class="flex justify-between mb-3">
+                        <span class="text-gray-700 font-medium">${skill.name}</span>
+                        <span class="text-green-600 font-semibold">${skill.level}%</span>
+                    </div>
+                    <div class="bg-gray-200 rounded-full h-3">
+                        <div class="skill-bar bg-gradient-to-r from-green-500 to-teal-500 h-3 rounded-full shadow-sm" style="width: ${skill.level}%"></div>
+                    </div>
+                `;
+                backendContainer.appendChild(skillDiv);
+            });
+        }
+
+        function showSuccessMessage(message) {
+            alert('✅ ' + message);
+        }
+
+        // Form submission handlers
+        document.getElementById('project-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const projectData = {
+                title: document.getElementById('project-title').value,
+                description: document.getElementById('project-description').value,
+                technologies: document.getElementById('project-technologies').value.split(',').map(t => t.trim()),
+                features: document.getElementById('project-features').value.split('\n').filter(f => f.trim()),
+                demoUrl: document.getElementById('project-demo').value,
+                githubUrl: document.getElementById('project-github').value,
+                challenges: 'Updated through website manager',
+                outcome: 'Successfully managed through website interface'
+            };
+            
+            if (currentEditingProject !== null) {
+                websiteData.projects[currentEditingProject] = { ...websiteData.projects[currentEditingProject], ...projectData };
+                showSuccessMessage('Project updated successfully!');
+            } else {
+                websiteData.projects.push(projectData);
+                showSuccessMessage('Project added successfully!');
+            }
+            
+            populateProjectsList();
+            updateProjectsOnWebsite();
+            closeProjectForm();
+        });
+
+        document.getElementById('certificate-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const certData = {
+                title: document.getElementById('cert-title').value,
+                issuer: document.getElementById('cert-issuer').value,
+                date: document.getElementById('cert-date').value,
+                validUntil: document.getElementById('cert-valid').value,
+                description: document.getElementById('cert-description').value,
+                skills: document.getElementById('cert-skills').value.split(',').map(s => s.trim()),
+                credentialId: document.getElementById('cert-credential').value,
+                verificationUrl: document.getElementById('cert-verification').value
+            };
+            
+            if (currentEditingCertificate !== null) {
+                websiteData.certificates[currentEditingCertificate] = { ...websiteData.certificates[currentEditingCertificate], ...certData };
+                showSuccessMessage('Certificate updated successfully!');
+            } else {
+                websiteData.certificates.push(certData);
+                showSuccessMessage('Certificate added successfully!');
+            }
+            
+            populateCertificatesList();
+            updateCertificatesOnWebsite();
+            closeCertificateForm();
+        });
+
+        document.getElementById('personal-info-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const personalData = {
+                name: document.getElementById('personal-name').value,
+                title: document.getElementById('personal-title').value,
+                email: document.getElementById('personal-email').value,
+                phone: document.getElementById('personal-phone').value,
+                location: document.getElementById('personal-location').value,
+                age: document.getElementById('personal-age').value,
+                about: document.getElementById('personal-about').value
+            };
+            
+            // Update website content
+            document.querySelector('#home h1').textContent = personalData.name;
+            document.querySelector('#home .text-xl').textContent = personalData.title;
+            document.querySelector('#about .text-lg').textContent = personalData.about;
+            
+            // Update profile popup
+            document.querySelector('.profile-content h3').textContent = personalData.name;
+            document.querySelector('.profile-content .text-blue-600').textContent = personalData.title;
+            
+            // Update contact information in popup
+            const contactDivs = document.querySelectorAll('.profile-content .space-y-4 > div');
+            contactDivs[0].querySelector('.text-gray-600').textContent = personalData.email;
+            contactDivs[1].querySelector('.text-gray-600').textContent = personalData.phone;
+            contactDivs[2].querySelector('.text-gray-600').textContent = personalData.location;
+            contactDivs[3].querySelector('.text-gray-600').textContent = personalData.age;
+            
+            showSuccessMessage('Personal information updated successfully!');
+        });
+
+        // Close modals when clicking outside
+        document.getElementById('settings-login-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'settings-login-modal') {
+                closeSettingsLogin();
+            }
+        });
+
+        document.getElementById('website-manager-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'website-manager-modal') {
+                closeWebsiteManager();
+            }
+        });
+
+        // Certificate details modal functions
+        function showCertificateDetails(index) {
+            const cert = certificateDetails[index];
+            const modal = document.getElementById('certificate-modal');
+            const title = document.getElementById('certificate-modal-title');
+            const content = document.getElementById('certificate-modal-content');
+            
+            title.textContent = cert.title;
+            content.innerHTML = `
+                <div class="mb-6">
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <h4 class="text-sm font-semibold text-gray-800 mb-1">Issuing Organization</h4>
+                            <p class="text-gray-600">${cert.issuer}</p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-gray-800 mb-1">Issue Date</h4>
+                            <p class="text-gray-600">${cert.date}</p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-gray-800 mb-1">Valid Until</h4>
+                            <p class="text-gray-600">${cert.validUntil}</p>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-gray-800 mb-1">Credential ID</h4>
+                            <p class="text-gray-600 text-sm">${cert.credentialId}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">Description</h4>
+                    <p class="text-gray-600 leading-relaxed">${cert.description}</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-3">Skills Validated</h4>
+                    <div class="flex flex-wrap gap-2">
+                        ${cert.skills.map(skill => `<span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">${skill}</span>`).join('')}
+                    </div>
+                </div>
+                
+                <div class="flex space-x-4 pt-4 border-t">
+                    <button onclick="window.open('${cert.verificationUrl}', '_blank')" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">Verify Certificate</button>
+                    <button class="bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">Download Certificate</button>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCertificateModal() {
+            const modal = document.getElementById('certificate-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modals when clicking outside
+        document.getElementById('project-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'project-modal') {
+                closeProjectModal();
+            }
+        });
+
+        document.getElementById('certificate-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'certificate-modal') {
+                closeCertificateModal();
+            }
+        });
+
+        // Mobile menu toggle functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        // Toggle mobile menu visibility
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links with proper offset for fixed navbar
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    // Calculate offset to account for fixed navbar height
+                    const navbarHeight = 80;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    
+                    // Smooth scroll to target position
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1, // Trigger when 10% of element is visible
+            rootMargin: '0px 0px -50px 0px' // Trigger slightly before element enters viewport
+        };
+
+        // Create observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in class
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Skill bars animation when skills section comes into view
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Find all skill bars in the current section
+                    const skillBars = entry.target.querySelectorAll('.skill-bar');
+                    skillBars.forEach((bar, index) => {
+                        const width = bar.getAttribute('data-width');
+                        // Animate each bar with a slight delay
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, index * 200);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe skills section for skill bar animations
+        const skillsSection = document.getElementById('skills');
+        if (skillsSection) {
+            skillObserver.observe(skillsSection);
+        }
+
+        // Resume management functionality
+        let currentResumeFile = null;
+        let resumeDownloadCount = 0;
+
+        // Download resume function for homepage button
+        function downloadResume() {
+            if (currentResumeFile) {
+                // Create download link
+                const link = document.createElement('a');
+                link.href = currentResumeFile.url;
+                link.download = currentResumeFile.name;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                // Update download count
+                resumeDownloadCount++;
+                updateResumeDownloadCount();
+                
+                // Show success message
+                console.log('Resume downloaded successfully!');
+            } else {
+                alert('No resume available for download. Please upload a resume first through the website manager.');
+            }
+        }
+
+        // Handle resume upload in website manager
+        function handleResumeUpload(input) {
+            const file = input.files[0];
+            if (!file) return;
+
+            // Validate file type
+            if (file.type !== 'application/pdf') {
+                alert('Please upload only PDF files.');
+                input.value = '';
+                return;
+            }
+
+            // Validate file size (10MB limit)
+            if (file.size > 10 * 1024 * 1024) {
+                alert('File size must be less than 10MB.');
+                input.value = '';
+                return;
+            }
+
+            // Create file URL
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                currentResumeFile = {
+                    name: file.name,
+                    size: file.size,
+                    url: e.target.result,
+                    uploadDate: new Date()
+                };
+                
+                updateResumeStatus();
+                showSuccessMessage('Resume uploaded successfully!');
+            };
+            reader.readAsDataURL(file);
+            
+            // Clear input
+            input.value = '';
+        }
+
+        // Update resume status display
+        function updateResumeStatus() {
+            const statusDiv = document.getElementById('resume-status');
+            const downloadBtn = document.getElementById('download-current-resume');
+            const removeBtn = document.getElementById('remove-resume');
+            
+            if (currentResumeFile) {
+                statusDiv.innerHTML = `
+                    <div class="bg-green-50 rounded-xl p-4 text-center border border-green-200">
+                        <div class="text-4xl mb-2">📄</div>
+                        <p class="text-green-800 text-sm font-semibold">${currentResumeFile.name}</p>
+                        <p class="text-green-600 text-xs mt-1">Ready for download</p>
+                    </div>
+                `;
+                downloadBtn.classList.remove('hidden');
+                removeBtn.classList.remove('hidden');
+                
+                // Update file details
+                document.getElementById('file-status').textContent = 'Active - Ready for download';
+                document.getElementById('file-size-display').textContent = (currentResumeFile.size / 1024 / 1024).toFixed(2) + ' MB';
+                document.getElementById('last-updated').textContent = currentResumeFile.uploadDate.toLocaleDateString() + ' at ' + currentResumeFile.uploadDate.toLocaleTimeString();
+                
+            } else {
+                statusDiv.innerHTML = `
+                    <div class="bg-gray-50 rounded-xl p-4 text-center">
+                        <div class="text-4xl mb-2">📁</div>
+                        <p class="text-gray-600 text-sm">No resume uploaded yet</p>
+                        <p class="text-gray-500 text-xs mt-1">Upload a PDF resume file</p>
+                    </div>
+                `;
+                downloadBtn.classList.add('hidden');
+                removeBtn.classList.add('hidden');
+                
+                // Reset file details
+                document.getElementById('file-status').textContent = 'No file uploaded';
+                document.getElementById('file-size-display').textContent = '-';
+                document.getElementById('last-updated').textContent = '-';
+            }
+        }
+
+        // Download current resume from manager
+        function downloadCurrentResume() {
+            if (currentResumeFile) {
+                const link = document.createElement('a');
+                link.href = currentResumeFile.url;
+                link.download = currentResumeFile.name;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                showSuccessMessage('Resume downloaded successfully!');
+            }
+        }
+
+        // Remove current resume
+        function removeCurrentResume() {
+            if (confirm('Are you sure you want to remove the current resume? This action cannot be undone.')) {
+                currentResumeFile = null;
+                updateResumeStatus();
+                updateResumeDownloadCount();
+                showSuccessMessage('Resume removed successfully!');
+            }
+        }
+
+        // Update download count display
+        function updateResumeDownloadCount() {
+            document.getElementById('download-count').textContent = resumeDownloadCount + ' downloads';
+        }
+
+
+
+        // WhatsApp contact function
+        function openWhatsApp() {
+            const phoneNumber = '917695948951'; // WhatsApp number without + and spaces
+            const message = 'Hi Suransingh! I found your website and would like to connect with you.';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Contact form submission handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = this.querySelector('input[name="name"]').value;
+            const email = this.querySelector('input[name="email"]').value;
+            const message = this.querySelector('textarea[name="message"]').value;
+            
+            // Create email body
+            const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}`;
+            const emailSubject = `Website Contact from ${name}`;
+            
+            // Open email client
+            window.location.href = `mailto:surandhami13@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${emailBody}`;
+            
+            // Show success message
+            setTimeout(() => {
+                alert(`Thank you ${name}! Your email client should open now. If it doesn't, you can email me directly at surandhami13@gmail.com or contact me via WhatsApp.`);
+            }, 500);
+            
+            // Reset form after submission
+            this.reset();
+        });
+
+        // Initial animations on page load
+        window.addEventListener('load', () => {
+            // Animate visible elements on page load
+            document.querySelectorAll('.fade-in').forEach((el, index) => {
+                if (el.getBoundingClientRect().top < window.innerHeight) {
+                    setTimeout(() => {
+                        el.classList.add('visible');
+                    }, index * 100); // Stagger animations
+                }
+            });
+        });
+
+        // Navbar background opacity change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(30, 58, 138, 0.95)';
+            } else {
+                navbar.style.background = 'rgba(30, 58, 138, 0.9)';
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96b0225555d5802f',t:'MTc1NDUwMDA4NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
