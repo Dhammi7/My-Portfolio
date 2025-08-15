@@ -240,6 +240,8 @@
                     <div>
                         <p class="font-semibold text-gray-800">Phone</p>
                         <p class="text-gray-600">+91 7695948951</p>
+                        <p class="text-gray-600">+977 9848801657</p>
+
                     </div>
                 </div>
                 
@@ -257,7 +259,7 @@
                     <span class="text-2xl">🎂</span>
                     <div>
                         <p class="font-semibold text-gray-800">Age</p>
-                        <p class="text-gray-600">20 years old</p>
+                        <p class="text-gray-600">25 years old</p>
                     </div>
                 </div>
                 
@@ -308,7 +310,8 @@
                 <div class="text-lg mb-8 text-gray-800 fade-in text-justify leading-relaxed">
                     <p class="mb-4">
                         Passionate about software development, problem-solving, and creating innovative solutions. Specialized in modern web technologies, scalable system design, and emerging financial technologies such as the stock market, cryptocurrency, and blockchain applications.
-                        Enthusiastic about AI-driven automation, data analytics, and cybersecurity .With a strong foundation in computer science principles and hands-on experience in full-stack development, I thrive on tackling complex challenges and delivering robust, user-centric applications. My expertise spans across multiple programming languages, frameworks, and emerging technologies.
+                        Enthusiastic about AI-driven automation, data analytics, and cybersecurity. Always eager to explore new trends, learn cutting-edge tools, and build impactful solutions that blend technology with real-world needs.
+                        With a strong foundation in computer science principles and hands-on experience in full-stack development, I thrive on tackling complex challenges and delivering robust, user-centric applications. My expertise spans across multiple programming languages, frameworks, and emerging technologies.
                     </p>
                 </div>
                 
@@ -363,9 +366,19 @@
                 <!-- Free-form homepage image without border/frame -->
                 <div class="relative inline-block">
                     <!-- <img src="WhatsApp Image 2025-08-09 at 17.56.38.jpeg"  -->
-                
-           <img src="WhatsApp Image 2025-08-09 at 17.56.38.jpeg" class="w-130 lg:w-[500px] h-auto">
-              
+           <div class="text-center">
+    <img src="WhatsApp Image 2025-08-09 at 17.56.38.jpeg" 
+         class="w-130 lg:w-[500px] h-auto mx-auto">
+<div class="text-center">
+    <h2 class="mt-4 font-extrabold bg-gradient-to-r from-[#DC143C] to-[#1E3A8A] text-transparent bg-clip-text drop-shadow-[0_0_10px_rgba(30,58,138,0.8)]" 
+        style="font-size: 25px;">
+        "जननी जन्मभूमिश्च स्वर्गादपि गरीयसी"
+    </h2>
+
+
+    </h2>
+</div>
+
        
      </div>
   </div>
@@ -374,89 +387,116 @@
 
     <!-- ===== ABOUT SECTION ===== -->
     <!-- Full-screen About section with image upload functionality -->
-    <section id="about" class="section-padding min-h-screen flex items-center justify-center about-bg">
-        <div class="w-full px-8 lg:px-12 py-20">
-            <!-- Section header -->
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 fade-in">ABOUT ME </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">A dedicated Computer Science Engineer with passion for technology and innovation.</p>
-            </div>
+   <section id="about" class="section-padding min-h-screen flex items-center justify-center about-bg">
+    <div class="w-full px-8 lg:px-12 py-20">
+        <!-- Section header -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 fade-in">ABOUT ME</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">
+                A dedicated Computer Science Engineer with passion for technology and innovation.
+            </p>
+        </div>
+
+        <!-- About content grid -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
             
-            <!-- About content grid -->
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Image upload section -->
-                <div class="fade-in">
-                    <div class="relative">
-                        <!-- About image display -->
-                        <div id="about-image-container" class="w-64 h-64 sm:w-80 sm:h-80 mx-auto bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-6xl sm:text-8xl text-white shadow-2xl overflow-hidden cursor-pointer hover:scale-105 transition-transform" onclick="document.getElementById('about-image-upload').click()">
-                            <span id="about-image-placeholder">💻</span>
-                            <img id="about-image-preview" class="w-full h-full object-cover hidden" alt="About Me">
-                        </div>
-                        
-                        <!-- Upload button overlay -->
-                        <div class="absolute bottom-4 right-4">
-                            <button onclick="document.getElementById('about-image-upload').click()" class="bg-white text-blue-600 p-3 rounded-full shadow-lg hover:bg-blue-50 transition-colors">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        
-                        <!-- Hidden file input -->
-                        <input type="file" id="about-image-upload" accept="image/*" class="hidden" onchange="handleAboutImageUpload(this)">
+            <!-- Fixed Image Section -->
+            <div class="fade-in flex justify-center">
+                <div class="relative group">
+                    <div class="w-72 h-72 sm:w-96 sm:h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-transparent bg-gradient-to-br from-blue-500 to-purple-600 p-1 transition-all duration-500 group-hover:scale-105 group-hover:shadow-[0_0_25px_rgba(59,130,246,0.8)]">
+                        <!-- ==== Paste your image URL here ==== -->
+                        <img src="WhatsApp Image 2025-08-15 at 14.17.43.jpeg" alt="About Me" class="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-110">
                     </div>
-                    
-                    <!-- Upload instructions -->
-                    <p class="text-center text-gray-500 text-sm mt-4 fade-in">Click the image or + button to upload your photo</p>
+                    <!-- Glow Effect -->
+                    <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-40 bg-gradient-to-br from-purple-500 to-blue-500 blur-xl transition-opacity"></div>
+                </div>
+            </div>
+
+            <!-- About Text -->
+            <div class="fade-in">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-6">My Journey</h3>
+                <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                    As a Computer Science Engineer, I've developed a strong foundation in software development, algorithms, and system design. My journey began with curiosity about how technology works and evolved into a passion for creating solutions that make a difference.
+                </p>
+                <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                    I specialize in full-stack development, with expertise in modern frameworks and technologies. I enjoy tackling complex problems and turning innovative ideas into reality through clean, efficient code.
+                </p>
+                
+                <!-- Professional qualities -->
+                <div class="flex flex-wrap gap-3 mb-8">
+                    <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Problem Solver</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium">Team Collaborator</span>
+                    <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">Continuous Learner</span>
+                    <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Innovation Focused</span>
                 </div>
                 
-                <!-- About text content -->
-                <div class="fade-in">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">My Journey</h3>
-                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">As a Computer Science Engineer, I've developed a strong foundation in software development, algorithms, and system design. My journey began with curiosity about how technology works and evolved into a passion for creating solutions that make a difference.</p>
-                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">I specialize in full-stack development, with expertise in modern frameworks and technologies. I enjoy tackling complex problems and turning innovative ideas into reality through clean, efficient code.</p>
-                    
-                    <!-- Professional qualities -->
-                    <div class="flex flex-wrap gap-3 mb-8">
-                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Problem Solver</span>
-                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium">Team Collaborator</span>
-                        <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">Continuous Learner</span>
-                        <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Innovation Focused</span>
-                    </div>
-                    
-                    <!-- Additional stats -->
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="text-center p-4 bg-white rounded-xl shadow-sm">
-                            <div class="text-2xl font-bold text-blue-600 mb-1">3+</div>
-                            <div class="text-gray-600 text-sm">Years Experience</div>
-                        </div>
-                        <div class="text-center p-4 bg-white rounded-xl shadow-sm">
-                            <div class="text-2xl font-bold text-green-600 mb-1">50+</div>
-                            <div class="text-gray-600 text-sm">Projects Completed</div>
-                        </div>
+                <!-- Additional stats -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+
+    <!-- Batch -->
+    <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+        <div class="text-lg font-bold text-green-600 mb-1">2023-2027</div>
+        <div class="text-gray-600 text-sm">Batch</div>
+    </div>
+
+
+     <!-- College -->
+    <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+        <div class="text-lg font-bold text-red-600 mb-1">Anna University</div>
+        <div class="text-gray-600 text-sm">Chennai</div>
+    </div>
+
+    
+    <!-- Course -->
+    <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+        <div class="text-lg font-bold text-blue-600 mb-1">B.Tech CSE</div>
+        <div class="text-gray-600 text-sm">Course</div>
+    </div>
+
+    <!-- CGPA -->
+    <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+        <div class="text-2xl font-bold text-purple-600 mb-1">8.3</div>
+        <div class="text-gray-600 text-sm">CGPA</div>
+    </div>
+
+    
+    <!-- Location -->
+    <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+        <div class="text-lg font-bold text-yellow-600 mb-1">India</div>
+        <div class="text-gray-600 text-sm">Location</div>
+    </div>
+
+    
+    
+
+   
+</div>
+
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- ===== PROJECTS SECTION ===== -->
-    <!-- Projects showcase with 6 featured projects in card layout -->
-    <section id="projects" class="section-padding py-20 projects-bg">
+    <<!-- ===== PROJECTS SECTION ===== -->
+<section id="projects" class="section-padding py-20 projects-bg">
     <div class="w-full px-8 lg:px-12">
         <!-- Section header -->
         <div class="text-center mb-16">
             <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 fade-in">PROJECTS</h2>
             <p class="text-xl text-gray-600 fade-in">Showcasing my technical skills through impactful real-world solutions</p>
         </div>
-        
+
         <!-- Projects grid -->
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Project 1: Waste Management System -->
+
+            <!-- Project 1 -->
             <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
-                <div class="h-48 bg-gradient-to-br from-green-600 to-lime-500 flex items-center justify-center text-6xl text-white">
-                    ♻️
+                <div class="h-48 overflow-hidden">
+                    <img src="waste management system.avif" alt="Waste Management System" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Waste Management System</h3>
@@ -476,10 +516,10 @@
                 </div>
             </div>
 
-            <!-- Project 2: Job Finder -->
+            <!-- Project 2 -->
             <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
-                <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center text-6xl text-white">
-                    💼
+                <div class="h-48 overflow-hidden">
+                    <img src="job proral.jpg" alt="Job Finder" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Job Finder</h3>
@@ -499,10 +539,10 @@
                 </div>
             </div>
 
-            <!-- Project 3: Doctor Appointment System -->
+            <!-- Project 3 -->
             <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
-                <div class="h-48 bg-gradient-to-br from-pink-500 to-red-500 flex items-center justify-center text-6xl text-white">
-                    🏥
+                <div class="h-48 overflow-hidden">
+                    <img src="doctor appoinment.png" alt="Doctor Appointment System" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Doctor Appointment System</h3>
@@ -522,10 +562,10 @@
                 </div>
             </div>
 
-            <!-- Project 4: Ride Sharing System -->
+            <!-- Project 4 -->
             <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
-                <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-6xl text-white">
-                    🚗
+                <div class="h-48 overflow-hidden">
+                    <img src="ride shares.jpg" alt="Ride Sharing System" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">Ride Sharing System</h3>
@@ -545,10 +585,10 @@
                 </div>
             </div>
 
-            <!-- Project 5: FarmaCap -->
+            <!-- Project 5 -->
             <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
-                <div class="h-48 bg-gradient-to-br from-teal-500 to-green-500 flex items-center justify-center text-6xl text-white">
-                    🌾
+                <div class="h-48 overflow-hidden">
+                    <img src="farmeer.jpg" alt="FarmaCap" class="w-full h-full object-cover">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-gray-800 mb-2">FarmaCap</h3>
@@ -567,33 +607,34 @@
                     </button>
                 </div>
             </div>
-            <!-- Project 6: AI Chatbot -->
-<div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
-    <div class="h-48 bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center text-6xl text-white">
-        🤖
-    </div>
-    <div class="p-6">
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">AI Chatbot</h3>
-        <p class="text-gray-600 mb-4">An AI-powered chatbot that understands user queries, provides instant responses, and integrates with multiple platforms for automated customer support.</p>
-        <div class="flex flex-wrap gap-2 mb-4">
-            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Python</span>
-            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Flask</span>
-            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">OpenAI API</span>
-        </div>
-        <div class="flex space-x-3 mb-4">
-            <button class="text-blue-600 hover:text-blue-800 font-medium transition-colors">Live Demo</button>
-            <button class="text-gray-600 hover:text-gray-800 font-medium transition-colors">GitHub</button>
-        </div>
-        <button onclick="showProjectDetails(4)" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-            View More Details
-        </button>
-    </div>
-</div>
 
+            <!-- Project 6 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="h-48 overflow-hidden">
+                    <img src="ai.jpg" alt="AI Chatbot" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">AI Chatbot</h3>
+                    <p class="text-gray-600 mb-4">An AI-powered chatbot that understands user queries, provides instant responses, and integrates with multiple platforms for automated customer support.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Python</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Flask</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">OpenAI API</span>
+                    </div>
+                    <div class="flex space-x-3 mb-4">
+                        <button class="text-blue-600 hover:text-blue-800 font-medium transition-colors">Live Demo</button>
+                        <button class="text-gray-600 hover:text-gray-800 font-medium transition-colors">GitHub</button>
+                    </div>
+                    <button onclick="showProjectDetails(5)" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                        View More Details
+                    </button>
+                </div>
+            </div>
 
         </div>
     </div>
 </section>
+
 
 
     <!-- ===== CERTIFICATIONS SECTION ===== -->
@@ -3179,5 +3220,3 @@
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96b0225555d5802f',t:'MTc1NDUwMDA4NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
-
-
