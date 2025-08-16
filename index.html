@@ -303,6 +303,13 @@
     <section id="home" class="home-bg min-h-screen flex items-center justify-center">
     <div class="w-full px-8 lg:px-12 py-20">
         <div class="grid lg:grid-cols-2 gap-8 items-center">
+            <!-- Information Side -->
+            <div class="text-center lg:text-left text-gray-800 lg:order-1 lg:pr-8">
+                
+                <!-- Live Date & Time -->
+                <div class="mb-4 fade-in">
+                    <h3 id="date-time" class="text-xl sm:text-2xl font-semibold text-black-700"></h3>
+                </div>
             <!-- Information Side - Extended to take more space -->
             <div class="text-center lg:text-left text-gray-800 lg:order-1 lg:pr-8">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 fade-in">SURAN SINGH DHAMI</h1>
@@ -402,6 +409,20 @@
   </div>
     
     </section>
+                
+<!-- ===== JS FOR LIVE TIME & DATE ===== -->
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        const options = { month: 'long', day: 'numeric' }; // Month Day format
+        const dateStr = now.toLocaleDateString('en-US', options);
+        const timeStr = now.toLocaleTimeString('en-US', { hour12: false }); // HH:MM:SS
+        document.getElementById("date-time").textContent = `${timeStr} | ${dateStr}`;
+    }
+
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+</script>
 
     <!-- ===== ABOUT SECTION ===== -->
     <!-- Full-screen About section with image upload functionality -->
@@ -3238,6 +3259,7 @@
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96b0225555d5802f',t:'MTc1NDUwMDA4NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
 
 
 
